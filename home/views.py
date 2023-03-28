@@ -16,8 +16,8 @@ def abouts_us(request):
 def contact_us(request):
   return render(request, 'pages/contact.html')
 
-def landing_freelancer(request):
-  return render(request, 'pages/landing-freelancer.html')
+def what(request):
+  return render(request, 'pages/what_we_do.html')
 
 def blank_page(request):
   return render(request, 'pages/blank.html')
