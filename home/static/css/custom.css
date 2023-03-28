@@ -14,11 +14,10 @@ body{
 
 img{
     border-radius: 10px;
-    border: 2px solid #78826d;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.text-pale-eucalypt{
+.text-eucalypt{
     color: #78826d!important;
 }
 
@@ -42,6 +41,10 @@ img{
 font-size: calc(3rem + 2.7vw);
 margin-right: 50%;
 }
+
+.display-3{
+    font-size: calc(2rem + 2.7vw);
+    }
 
 .lead{
 font-size: x-large;
@@ -79,4 +82,21 @@ body{
     background-image: url(hamburger.png) !important;
   }
 
+  .btn-outline-primary:hover {
+    color: #edefec!important;
+    background-color: #78826d!important;
+    border-color: #78826d!important;
+  }
+
+  .btn-outline-secondary{
+    color: #78826d!important;
+    background-color: #edefec!important;
+    border-color: #edefec!important;
+  }
+
+  .btn-outline-secondary:hover{
+    color: #edefec!important;
+    background-color: #78826d!important;
+    border-color: #edefec!important;
+  }
   
