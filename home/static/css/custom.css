@@ -1,0 +1,33 @@
+.bg-custom{
+    background-color: #78826d!important;
+}
+.bg-custom-light{
+    background-color: #d0d4cc!important;
+}
+
+.fill-custom {
+    fill: #d0d4cc; }
+
+img{
+    border-radius: 10px;
+}
+
+.text-pale-eucalypt{
+    color: #78826d!important;
+}
+
+.nav-link{
+    color: #78826d!important;
+    font-size: larger;
+}
+
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+  font-weight: 600;
+  color: #ffffff!important; }
+
+.text-muted {
+color: #d0d4cc !important;
+}

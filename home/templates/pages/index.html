@@ -8,12 +8,12 @@
   {% include 'includes/pre-loader.html' %}
 
   <!-- Hero -->
-  <section class="section-header overflow-hidden pt-7 pt-lg-8 pb-9 pb-lg-12 bg-primary text-white">
+  <section class="section-header overflow-hidden pt-7 pt-lg-8 pb-9 pb-lg-12 bg-custom text-pale-eucalypt">
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
           <div class="bootstrap-big-icon d-none d-lg-block">
-            <svg xmlns="http://www.w3.org/2000/svg" width="700" height="622" class="d-block my-1" viewBox="0 0 118 94"
+            <svg xmlns="{% static 'assets/img/logoshort.jpg' %}" width="700" height="622" class="d-block my-1" viewBox="0 0 118 94"
               role="img">
               <title>ZenixION Software Solutions</title>
             </svg>
@@ -26,7 +26,7 @@
           </h2>
           <!-- Button Modal -->
           <div class="d-flex justify-content-center flex-column mb-6 mb-lg-5">
-              <img src="{% static 'assets/img/LOGO INITIALS.jpg' %}" class="d-block mx-auto mb-3" height="75" width="75"
+              <img src="{% static 'assets/img/logoshort.jpg' %}" class="d-block mx-auto mb-3" height="75" width="75"
                 alt="Logo">
               <span class="text-muted font-small"> 
                 &copy; ZenixION - by JPanettieri.
@@ -35,20 +35,19 @@
         </div>
       </div>
     </div>
-    <figure class="position-absolute bottom-0 left-0 w-100 d-none d-md-block mb-n2"><svg class="fill-white"
+    <figure class="position-absolute bottom-0 left-0 w-100 d-none d-md-block mb-n2"><svg class="fill-custom"
         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 185.4">
         <path d="M3000,0v185.4H0V0c496.4,115.6,996.4,173.4,1500,173.4S2503.6,115.6,3000,0z"></path>
       </svg></figure>
   </section>
-  <div class="section py-0">
     <div class="container mt-n10 mt-lg-n12 z-2">
       <div class="row justify-content-center">
-        <div class="col-12 col-md-10"><img src="{% static 'assets/img/presentation-mockup.png' %}" alt="Pixel Free Mockup"></div>
+        <div class="col-12 col-md-10"><img src="{% static 'assets/img/logoImage.jpg' %}" alt="Pixel Free Mockup"></div>
       </div>
     </div>
   </div>
 
-  <section class="section section-lg">
+  <section class="section bg-custom-light section-lg">
     <div class="container">
       <div class="row justify-content-center mb-5 mb-lg-6">
         <div class="col-6 col-md-3 text-center mb-4">
@@ -96,7 +95,7 @@
       <div class="row justify-content-between align-items-center mb-5 mb-lg-7">
         <div class="col-lg-5 mb-5 mb-lg-0">
           <h2 class="h1 d-flex align-items-center">Modular sections <span
-              class="badge-md ms-3 mb-0 fs-6 badge rounded-pill text-white bg-tertiary">Pro</span>
+              class="badge-md ms-3 mb-0 fs-6 badge rounded-pill text-pale-eucalypt bg-tertiary">Pro</span>
           </h2>
           <p class="mb-4 lead fw-bold">More than 50 website sections</p>
           <p class="mb-4">Using the sections in Pixel Pro you can easily build new pages by adding them
@@ -114,7 +113,7 @@
       <div class="row justify-content-between align-items-center">
         <div class="col-12 col-lg-5 order-lg-2 mb-5 mb-lg-0">
           <h2 class="h1 d-flex align-items-center">User Dashboard <span
-              class="badge-md ms-3 mb-0 fs-6 badge rounded-pill text-white bg-tertiary">Pro</span>
+              class="badge-md ms-3 mb-0 fs-6 badge rounded-pill text-pale-eucalypt bg-tertiary">Pro</span>
           </h2>
           <p class="mb-4 lead fw-bold">9 dashboard pages</p>
           <p class="mb-4">Quickly set up a user settings panel with the advanced dashboard pages including
@@ -130,219 +129,16 @@
     </div>
   </section>
 
-
-
-  <div class="section section-sm pb-0 mb-n4" id="components">
-    <div class="container">
-      <div class="row justify-content-center">
-        <h3 class="text-center">Accordions</h3>
-      </div>
-    </div>
-  </div>
-  {% include 'includes/components/_accordions.html' %}
-
-
-  <div class="section section-sm pb-0 mb-n4">
-    <div class="container">
-      <div class="row justify-content-center">
-        <h3 class="text-center">Alerts</h3>
-      </div>
-    </div>
-  </div>
-  {% include 'includes/components/_alerts.html' %} 
-
-
-  <div class="section section-sm pb-0 mb-n4">
-    <div class="container">
-      <div class="row justify-content-center">
-        <h3 class="text-center">Badges</h3>
-      </div>
-    </div>
-  </div>
-  {% include 'includes/components/_badges.html' %}
-
-
-  <div class="section section-sm pb-0 mb-n4">
-    <div class="container">
-      <div class="row justify-content-center">
-        <h3 class="text-center">Cards</h3>
-      </div>
-    </div>
-  </div>
-  {% include 'includes/components/_cards.html' %}
-
-
-  <div class="section section-sm pb-0 mb-n4">
-    <div class="container">
-      <div class="row justify-content-center">
-        <h3 class="text-center">Carousels</h3>
-      </div>
-    </div>
-  </div>
-  {% include 'includes/components/_bootstrap-carousels.html' %}
-
-
-  <div class="section section-sm pb-0 mb-n4">
-    <div class="container">
-      <div class="row justify-content-center">
-        <h3 class="text-center">Breadcrumbs</h3>
-      </div>
-    </div>
-  </div>
-  {% include 'includes/components/_breadcrumbs.html' %}
-
-
-  <div class="section section-sm pb-0 mb-n4">
-    <div class="container">
-      <div class="row justify-content-center">
-        <h3 class="text-center">Buttons</h3>
-      </div>
-    </div>
-  </div>
-  {% include 'includes/components/_buttons.html' %}
-
-
-  <div class="section section-sm pb-0 mb-n4">
-    <div class="container">
-      <div class="row justify-content-center">
-        <h3 class="text-center">Dropdowns</h3>
-      </div>
-    </div>
-  </div>
-  {% include 'includes/components/_dropdowns.html' %}
-
-
-  <div class="section section-sm pb-0 mb-n4">
-    <div class="container">
-      <div class="row justify-content-center">
-        <h3 class="text-center">Forms</h3>
-      </div>
-    </div>
-  </div>
-  {% include 'includes/components/_forms.html' %}
-
-
-  <div class="section section-sm pb-0 mb-n4">
-    <div class="container">
-      <div class="row justify-content-center">
-        <h3 class="text-center">Modals</h3>
-      </div>
-    </div>
-  </div>
-  {% include 'includes/components/_modals.html' %}
-
-
-  <div class="section section-sm pb-0 mb-n4">
-    <div class="container">
-      <div class="row justify-content-center">
-        <h3 class="text-center">Navs</h3>
-      </div>
-    </div>
-  </div>
-  {% include 'includes/components/_navs.html' %}
-
-
-  <div class="section section-sm pb-0 mb-n4">
-    <div class="container">
-      <div class="row justify-content-center">
-        <h3 class="text-center">Pagination</h3>
-      </div>
-    </div>
-  </div>
-  {% include 'includes/components/_pagination.html' %}
-
-
-  <div class="section section-sm pb-0 mb-n4">
-    <div class="container">
-      <div class="row justify-content-center">
-        <h3 class="text-center">Popovers</h3>
-      </div>
-    </div>
-  </div>
-  {% include 'includes/components/_popovers.html' %}
-
-
-  <div class="section section-sm pb-0 mb-n4">
-    <div class="container">
-      <div class="row justify-content-center">
-        <h3 class="text-center">Progress bars</h3>
-      </div>
-    </div>
-  </div>
-  {% include 'includes/components/_progress-bars.html' %}
-
-
-  <div class="section section-sm pb-0 mb-n4">
-    <div class="container">
-      <div class="row justify-content-center">
-        <h3 class="text-center">Tabs</h3>
-      </div>
-    </div>
-  </div>
-  {% include 'includes/components/_tabs.html' %}
-
-
-  <div class="section section-sm pb-0 mb-n4">
-    <div class="container">
-      <div class="row justify-content-center">
-        <h3 class="text-center">Toasts</h3>
-      </div>
-    </div>
-  </div>
-  {% include 'includes/components/_toasts.html' %}
-
-
-  <div class="section section-sm pb-0 mb-n4">
-    <div class="container">
-      <div class="row justify-content-center">
-        <h3 class="text-center">Tooltips</h3>
-      </div>
-    </div>
-  </div>
-  {% include 'includes/components/_tooltips.html' %}
-
-
-  <div class="section section-sm pb-0 mb-n4">
-    <div class="container">
-      <div class="row justify-content-center">
-        <h3 class="text-center">Typography</h3>
-      </div>
-    </div>
-  </div>
-  {% include 'includes/components/_typography.html' %}
-
-
-  <div class="section section-sm pb-0 mb-n4">
-    <div class="container">
-      <div class="row justify-content-center">
-        <h3 class="text-center">Tables</h3>
-      </div>
-    </div>
-  </div>
-  {% include 'includes/components/_tables.html' %}
-
-
-  <section class="section section-md bg-soft">
-    <div class="container">
-      <div class="row justify-content-center mb-5 mb-lg-6">
-        <div class="col-12 text-center">
-          <h2 class="h1 px-lg-5">5 hand-crafted example pages</h2>
-        </div>
-      </div>
-      {% include 'includes/_pages-preview.html' %}
-    </div>
-  </section>
-
   <section class="section section-lg bg-tertiary">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-lg-8 text-center text-white">
+        <div class="col-lg-8 text-center text-pale-eucalypt">
           <h2 class="h1 font-weight-light">Notable <span class="font-weight-bold">features</span></h2>
           <p class="lead">You get all Bootstrap components fully customized. Besides, you receive numerous
             plugins out of the box and ready to use</p>
         </div>
       </div>
-      <div class="row mt-6 text-white">
+      <div class="row mt-6 text-pale-eucalypt">
         <div class="col-md-4">
           <!-- Icon box -->
           <div class="icon-box text-center mb-5">
@@ -529,7 +325,7 @@
   </section>
   <section class="section section-lg bg-secondary">
     <div class="container">
-      <div class="row justify-content-center text-center text-white">
+      <div class="row justify-content-center text-center text-pale-eucalypt">
         <div class="col-lg-10 col-xl-12">
           <h2 class="fw-light mb-4">WCAG 2.1 accessible <span class="fw-bold">color scheme</span></h2>
           <p class="lead">
@@ -541,7 +337,7 @@
       <div class="row mt-4 mt-lg-6">
         <div class="col-md-6 col-sm-6 col-lg-3">
           <div class="card shadow-soft border-soft bg-gray-200 p-5 text-center mb-4">
-            <div class="color-shape rounded bg-primary m-auto"></div>
+            <div class="color-shape rounded bg-custom m-auto"></div>
             <div class="mt-4">
               <h2 class="h5 text-dark">Primary:</h2>
               <span class="fw-bold text-primary">#174F84</span>
@@ -558,47 +354,47 @@
           </div>
         </div>
         <div class="col-md-6 col-sm-6 col-lg-3">
-          <div class="card shadow-soft border-dark bg-primary p-5 text-center mb-4">
+          <div class="card shadow-soft border-dark bg-custom p-5 text-center mb-4">
             <div class="color-shape rounded bg-tertiary m-auto"></div>
-            <div class="mt-4 text-white">
+            <div class="mt-4 text-pale-eucalypt">
               <h2 class="h5">Tertiary:</h2>
-              <span class="fw-bold text-white">#FF7F66</span>
+              <span class="fw-bold text-pale-eucalypt">#FF7F66</span>
             </div>
           </div>
         </div>
         <div class="col-md-6 col-sm-6 col-lg-3">
-          <div class="card shadow-soft border-dark bg-primary p-5 text-center mb-4">
+          <div class="card shadow-soft border-dark bg-custom p-5 text-center mb-4">
             <div class="color-shape rounded bg-info m-auto"></div>
-            <div class="mt-4 text-white">
+            <div class="mt-4 text-pale-eucalypt">
               <h2 class="h5">Info:</h2>
-              <span class="fw-bold text-white">#1E90FF</span>
+              <span class="fw-bold text-pale-eucalypt">#1E90FF</span>
             </div>
           </div>
         </div>
         <div class="col-md-6 col-sm-6 col-lg-3">
-          <div class="card shadow-soft border-dark bg-primary p-5 text-center mb-4">
+          <div class="card shadow-soft border-dark bg-custom p-5 text-center mb-4">
             <div class="color-shape rounded bg-warning m-auto"></div>
-            <div class="mt-4 text-white">
+            <div class="mt-4 text-pale-eucalypt">
               <h2 class="h5">Warning:</h2>
-              <span class="fw-bold text-white">#F5B759</span>
+              <span class="fw-bold text-pale-eucalypt">#F5B759</span>
             </div>
           </div>
         </div>
         <div class="col-md-6 col-sm-6 col-lg-3">
-          <div class="card shadow-soft border-dark bg-primary p-5 text-center mb-4">
+          <div class="card shadow-soft border-dark bg-custom p-5 text-center mb-4">
             <div class="color-shape rounded bg-success m-auto"></div>
-            <div class="mt-4 text-white">
+            <div class="mt-4 text-pale-eucalypt">
               <h2 class="h5">Success:</h2>
-              <span class="fw-bold text-white">#00BF9A</span>
+              <span class="fw-bold text-pale-eucalypt">#00BF9A</span>
             </div>
           </div>
         </div>
         <div class="col-md-6 col-sm-6 col-lg-3">
-          <div class="card shadow-soft border-dark bg-primary p-5 text-center mb-4">
+          <div class="card shadow-soft border-dark bg-custom p-5 text-center mb-4">
             <div class="color-shape rounded bg-danger m-auto"></div>
-            <div class="mt-4 text-white">
+            <div class="mt-4 text-pale-eucalypt">
               <h2 class="h5">Danger:</h2>
-              <span class="fw-bold text-white">#FA5252</span>
+              <span class="fw-bold text-pale-eucalypt">#FA5252</span>
             </div>
           </div>
         </div>
@@ -612,18 +408,18 @@
           </div>
         </div>
         <div class="col-md-6 col-sm-6 col-lg-3">
-          <div class="card shadow-soft border-dark bg-primary p-5 text-center mb-4">
+          <div class="card shadow-soft border-dark bg-custom p-5 text-center mb-4">
             <div class="color-shape rounded bg-gray-300 m-auto"></div>
-            <div class="mt-4 text-white">
+            <div class="mt-4 text-pale-eucalypt">
               <h2 class="h5">Light:</h2>
               <span class="fw-bold text-light">#DDE1ED</span>
             </div>
           </div>
         </div>
         <div class="col-md-6 col-sm-6 col-lg-3">
-          <div class="card shadow-soft border-dark bg-primary p-5 text-center mb-4">
+          <div class="card shadow-soft border-dark bg-custom p-5 text-center mb-4">
             <div class="color-shape rounded bg-gray-200 m-auto"></div>
-            <div class="mt-4 text-white">
+            <div class="mt-4 text-pale-eucalypt">
               <h2 class="h5">Soft:</h2>
               <span class="fw-bold text-light">#EFF2F5</span>
             </div>
@@ -647,7 +443,7 @@
       <div class="row justify-content-center mb-6">
         <div class="col-md-10 col-xl-9">
           <div class="position-relative">
-            <div class="rounded bg-dark p-4 text-white mb-2">
+            <div class="rounded bg-dark p-4 text-pale-eucalypt mb-2">
               <div class="mb-3">
                 <div class="fw-normal">&gt; $ npm install</div>
                 <div class="text-muted">Everything’s installed!</div>
@@ -664,8 +460,8 @@
               </div>
             </div>
           </div>
-          <div class="alert bg-dark text-white position-relative mt-4"><span class="fas fa-question-circle me-2"></span>
-            Looks unfamiliar? Don’t worry! Our <a class="text-white fw-bold text-underline"
+          <div class="alert bg-dark text-pale-eucalypt position-relative mt-4"><span class="fas fa-question-circle me-2"></span>
+            Looks unfamiliar? Don’t worry! Our <a class="text-pale-eucalypt fw-bold text-underline"
               href="https://github.com/app-generator/django-theme-pixel"
               target="_blank">documentation</a> has got you covered.</div>
         </div>
