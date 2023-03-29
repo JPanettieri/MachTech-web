@@ -7,15 +7,19 @@
         {% include 'includes/pre-loader.html' %}
 
         <!-- Hero -->
-        <section class="section-header bg-secondary text-white">
+        <section class="section-header bg-custom text-white">
             <div class="container">
                <div class="row justify-content-between align-items-center">
                   <div class="col-12 col-md-7 col-lg-6 text-center text-md-left">
-                        <h1 class="display-2 mb-4">Full-Service <br class="d-none d-md-inline">Digital Agency</h1>
-                        <p class="lead mb-4 text-muted">Themesberg can help you build a modern website, a creative logo or PWA, that will bring you customers and and stay on top of your competition.</p>
-                        <a href="./services.html" class="btn btn-tertiary me-3 animate-up-2">What we do <span class="ms-2"><span class="fas fa-arrow-right"></span></span></a>
+                        <h1 class="display-2 mb-4">Complete<br class="d-none d-md-inline">Software<br class="d-none d-md-inline">Solutions</h1>
+                        <p class="para mb-4 text-muted">We offer complete software solutions for all your business needs. </p>
+                        <p class="para mb-4 text-muted">From customized software development to enterprise-level solutions, and everything in between. </p>
+                        <p class="para mb-4 text-muted">Our team will work closely with you to understand your business needs and deliver customized software solutions that meet your exact requirements.</p>
+                        <a href="{% url 'what-we-do' %}" class="btn btn-outline-secondary me-3 animate-up-2">What we do <span class="ms-2"><span class="fas fa-arrow-right"></span></span></a>
                     </div>
-                  <div class="col-12 col-md-5 d-none d-md-block text-center"><img src="{% static 'assets/img/illustrations/about-illustration.svg' %}" alt=""></div>
+                    <div class="col-12 col-md-5 d-none d-md-block text-center">
+                        <img class="bg-custom-light" src="{% static 'assets/img/programmer-writing-code.png' %}" alt="">
+                    </div>
                </div>
             </div>
         </section>
@@ -24,55 +28,22 @@
         <section class="section section-md">
             <div class="container">
                 <div class="row align-items-center justify-content-around">
-                    <div class="col-md-6 col-xl-6 mb-5">
-                        <img class="organic-radius img-fluid" src="{% static 'assets/img/sections/about-us-1.jpg' %}" alt="Office Desk">
-                    </div>
-                    <div class="col-md-6 col-xl-5 text-center text-md-left">
-                        <h2 class="h1 mb-5">All challenges accepted.</h2>
-                        <p class="lead">Themesberg is an experienced and passionate group of designers, developers, project managers, writers and artists. Every client we work with becomes a part of the team. Together we face the challenges and celebrate the victories.</p>
-                        <p class="lead">With a culture of collaboration, a roster of talent, and several office pooches, the Themesberg team is active in the creative community, endlessly interested in what’s next, and generally pleasant to be around.</p>
-                        <img src="{% static 'assets/img/signature.svg' %}" alt="signature" class="mt-4" width="150">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End of section -->
-        <!-- Section -->
-        <section class="section section-lg pt-0">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 col-lg-4 text-center">
-                        <!-- Visit Box -->
-                        <div class="icon-box mb-4">
-                            <div class="icon icon-primary mb-4">
-                                <span class="fas fa-user"></span>
+                    <div class="col-md-5 col-xl-12 text-center text-md-left">
+                        <h2 class="h1 mb-5 text-eucalypt">No challenge too big.</h2>
+                        <p class="lead text-eucalypt">At ZenixION, we are a small but mighty team of versatile programmers, 
+                            experienced, passionate and ready to take on any challenge.</p>
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <img class="organic-radius img-fluid" src="{% static 'assets/img/mountain-small_man.png' %}" alt="Big Challenge">
                             </div>
-                            <h3 class="h5">Team Members</h3>
-                            <span class="counter display-3 text-gray d-block">500</span>
-                        </div>
-                        <!-- End of Visit Box -->
-                    </div>
-                    <div class="col-md-4 col-lg-4 text-center">
-                        <!-- Call Box -->
-                        <div class="icon-box mb-4">
-                            <div class="icon icon-primary mb-4">
-                                <span class="fas fa-money-check"></span>
+                            <div class="col-md-6">
+                                <p class="para text-eucalypt">When working with us, our clients become an integral part of our team as we work together to tackle any obstacle 
+                                    that comes our way. No challenge is too big for us to handle, and we are always eager to push ourselves to the limit to achieve success.</p>
+                                <p class="para text-eucalypt">Our culture of collaboration is supported by our passion for programming and exploration of new technologies. We are constantly keeping up with the latest trends and techniques to provide cutting-edge solutions. And, with our friendly approach and positive attitude, We make sure our clients enjoy the journey with us.</p>
                             </div>
-                            <h3 class="h5">Projects Published</h3>
-                            <span class="counter display-3 text-gray d-block">2400</span>
-                        </div>
-                        <!-- End of Call Box -->
-                    </div>
-                    <div class="col-md-4 col-lg-4 text-center">
-                        <!-- Email Box -->
-                        <div class="icon-box mb-4">
-                            <div class="icon icon-primary mb-4">
-                                <span class="fas fa-globe-europe"></span>
                             </div>
-                            <h3 class="h5">Countries</h3>
-                            <span class="counter display-3 text-gray d-block">80</span>
-                        </div>
-                        <!-- End of Email Box -->
+                        <p class="lead text-eucalypt mt-2">At ZenixION, We are not just a programmers, We are your partner in success. Working together, we can achieve anything. 
+                            So, if you're looking for a team who can tackle any challenge with ease, look no further..</p>
                     </div>
                 </div>
             </div>
@@ -88,7 +59,7 @@
             <div class="container">
                 <div class="row text-center">
                     <div class="col">
-                        <h2 class="h1 fw-light"><span class="fw-bold">Our</span> history</h2>
+                        <h2 class="h1 fw-light text-eucalypt"><span class="fw-bold text-eucalypt">Our</span> Process</h2>
                     </div>
                 </div>
                 <div class="row justify-content-center mt-6">
@@ -97,37 +68,44 @@
                             <div class="timeline timeline-one dark px-3 px-sm-0">
                                 <!-- Timeline Item 1 -->
                                 <div class="timeline-item">
-                                    <h3 class="h4 mb-4">Present</h3>
-                                    <p>Now over seven years old, Bootstrap is an established and widely-used HTML, CSS, and JavaScript framework. It can be used as a basis for creating responsive web and mobile sites and web applications.</p>
+                                    <h3 class="h4 mb-4 text-eucalypt">Planning</h3>
+                                    <p class="text-eucalypt para">We work with you to understand your project goals and requirements, creating a roadmap for the development process.</p>
                                 </div>
                                 <!-- Timeline Item 2 -->
                                 <div class="timeline-item">
-                                    <h3 class="h4 mb-4">Our first products</h3>
-                                    <div class="my-3">
-                                        <span class="icon icon-sm icon-purple me-2"><span class="fab fa-bootstrap"></span></span>
-                                        <span class="icon icon-sm icon-info me-2"><span class="fab fa-react"></span></span>
-                                        <span class="icon icon-sm icon-success me-2"><span class="fab fa-vuejs"></span></span>
-                                        <span class="icon icon-sm icon-danger"><span class="fab fa-angular"></span></span>
-                                    </div>
-                                    <p>Bootstrap. Build responsive, mobile-first projects on the web with the world's most popular front-end component library. Bootstrap is an open source toolkit for developing with HTML, CSS, and JS. Quickly prototype your
-                                        ideas.
+                                    <h3 class="h4 mb-4 text-eucalypt">Analysis</h3>
+                                    <p class="text-eucalypt para">Our team conducts a thorough analysis of your business needs and user requirements to determine the most effective software solution.
                                     </p>
                                 </div>
                                 <!-- Timeline Item 3 -->
                                 <div class="timeline-item">
-                                    <h3 class="h4 mb-4">Our office</h3>
-                                    <img class="mt-2" src="{% static 'assets/img/office.png' %}" alt="Themesberg workspace" width="300">
-                                    <p>AngularJS is a JavaScript-based open-source front-end web application framework mainly maintained by Google and by a community of individuals and corporations to address many of the challenges encountered in developing
-                                        single-page applications.
+                                    <h3 class="h4 mb-4 text-eucalypt">Design</h3>
+                                    <p class="text-eucalypt para">Our designers create a visually stunning and intuitive user interface that enhances the user experience.
                                     </p>
                                 </div>
                                 <!-- Timeline Item 4 -->
                                 <div class="timeline-item">
-                                    <h3 class="h4 mb-4">An ideea becomes a business</h3>
-                                    <p>AngularJS is a JavaScript-based open-source front-end web application framework mainly maintained by Google and by a community of individuals and corporations to address many of the challenges encountered in developing
-                                        single-page applications.
+                                    <h3 class="h4 mb-4 text-eucalypt">Development</h3>
+                                    <p class="text-eucalypt para">Our skilled developers utilize the latest technologies to develop a robust and scalable software solution.
                                     </p>
-                                    <img class="mt-2" src="{% static 'assets/img/signature.svg' %}" alt="signature" width="100">
+                                </div>
+                                <!-- Timeline Item 5 -->
+                                <div class="timeline-item">
+                                    <h3 class="h4 mb-4 text-eucalypt">Testing</h3>
+                                    <p class="text-eucalypt para">We ensure that the software is thoroughly tested for functionality, usability, and security to guarantee optimal performance.
+                                    </p>
+                                </div>
+                                <!-- Timeline Item 6 -->
+                                <div class="timeline-item">
+                                    <h3 class="h4 mb-4 text-eucalypt">Deployment</h3>
+                                    <p class="text-eucalypt para">We deploy the software to your desired platform, providing support throughout the installation process.
+                                    </p>
+                                </div>
+                                <!-- Timeline Item 7 -->
+                                <div class="timeline-item">
+                                    <h3 class="h4 mb-4 text-eucalypt">Maintenance</h3>
+                                    <p class="text-eucalypt para">Our team provides ongoing maintenance and support to ensure that the software remains up-to-date and fully functional.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -145,107 +123,9 @@
             <div class="container">
                 <div class="row mb-5 mb-lg-6">
                     <div class="col-12 col-md-9 col-lg-8 text-center mx-auto">
-                        <h2 class="h1 mb-4">Funny &amp; Creative Team</h2>
-                        <p class="lead">We have developed a multi-discipline portfolio as a digital marketing agency, we also have roots in print media and even photography.
+                        <h2 class="h1 mb-4 text-eucalypt">Fun Facts about ZenixION...</h2>
+                        <p class="lead text-eucalypt">We have developed a multi-discipline portfolio as a digital marketing agency, we also have roots in print media and even photography.
                         </p>
-                    </div>
-                </div>
-                <div class="row mb-5 mb-lg-6">
-                    <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0">
-                        <div class="card shadow border-gray-300">
-                            <img src="{% static 'assets/img/team/profile-picture-1.jpg' %}" class="card-img-top rounded-top" alt="Joseph Portrait">
-                            <div class="card-body">
-                                <h3 class="h4 card-title mb-2">Joseph Garth</h3>
-                                <span class="card-subtitle text-gray fw-normal">Co-Founder</span>
-                                <p class="card-text my-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <ul class="list-unstyled d-flex mt-3 mb-0">
-                                    <li>
-                                        <a href="#" target="_blank" aria-label="facebook social link" class="icon-facebook me-3">
-                                            <span class="fab fa-facebook-f"></span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_blank" aria-label="twitter social link" class="icon-twitter me-3">
-                                            <span class="fab fa-twitter"></span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_blank" aria-label="slack social link" class="icon-slack me-3">
-                                            <span class="fab fa-slack-hash"></span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_blank" aria-label="dribbble social link" class="icon-dribbble me-3">
-                                            <span class="fab fa-dribbble"></span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0">
-                        <div class="card shadow border-gray-300">
-                            <img src="{% static 'assets/img/team/profile-picture-3.jpg' %}" class="card-img-top rounded-top" alt="Bonnie portrait">
-                            <div class="card-body">
-                                <h3 class="h4 card-title mb-2">Bonnie Green</h3>
-                                <span class="card-subtitle text-gray fw-normal">Web Developer</span>
-                                <p class="card-text my-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <ul class="list-unstyled d-flex mt-3 mb-0">
-                                    <li>
-                                        <a href="#" target="_blank" aria-label="facebook social link" class="icon-facebook me-3">
-                                            <span class="fab fa-facebook-f"></span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_blank" aria-label="twitter social link" class="icon-twitter me-3">
-                                            <span class="fab fa-twitter"></span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_blank" aria-label="slack social link" class="icon-slack me-3">
-                                            <span class="fab fa-slack-hash"></span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_blank" aria-label="dribbble social link" class="icon-dribbble me-3">
-                                            <span class="fab fa-dribbble"></span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card shadow border-gray-300">
-                            <img src="{% static 'assets/img/team/profile-picture-4.jpg' %}" class="card-img-top rounded-top" alt="Jose Avatar">
-                            <div class="card-body">
-                                <h3 class="h4 card-title mb-2">Jose Leos</h3>
-                                <span class="card-subtitle text-gray fw-normal">Web publications designer</span>
-                                <p class="card-text my-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <ul class="list-unstyled d-flex mt-3 mb-0">
-                                    <li>
-                                        <a href="#" target="_blank" aria-label="facebook social link" class="icon-facebook me-3">
-                                            <span class="fab fa-facebook-f"></span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_blank" aria-label="twitter social link" class="icon-twitter me-3">
-                                            <span class="fab fa-twitter"></span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_blank" aria-label="slack social link" class="icon-slack me-3">
-                                            <span class="fab fa-slack-hash"></span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_blank" aria-label="dribbble social link" class="icon-dribbble me-3">
-                                            <span class="fab fa-dribbble"></span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="row justify-content-center">
@@ -253,17 +133,18 @@
                         <!-- Contact Card -->
                         <div class="card border-0 p-2 p-md-3 p-lg-5">
                             <div class="card-header bg-white border-0 text-center">
-                                <h2>Want to work with us?</h2>
-                                <p>Cool! Let’s talk about your project</p>
+                                <h2 class="text-eucalypt">Have a project in mind?</h2>
+                                <h2 class="text-eucalypt">Need help with an issue?</h2>
+                                <p class="text-eucalypt">Let’s talk about it and see how we can help.</p>
                             </div>
-                            <div class="card-body pt-0">
+                            <div class="card-body px-0 pt-0">
                                 <form action="#">
                                     <!-- Form -->
                                     <div class="mb-4">
                                         <label for="name">Your Name</label>
                                         <div class="input-group">
-                                            <span class="input-group-text" id="basic-addon3"><span class="fas fa-user-circle"></span></span>
-                                            <input type="text" class="form-control" placeholder="e.g. Bonnie Green" id="name" required>
+                                            <span class="input-group-text" id="basic-addon3"><span class="fas fa-user-circle text-eucalypt"></span></span>
+                                            <input type="text" class="form-control" placeholder="e.g. John Smith" id="name" required>
                                         </div>
                                     </div>
                                     <!-- End of Form -->
@@ -271,7 +152,7 @@
                                     <div class="mb-4">
                                         <label for="email">Your Email</label>
                                         <div class="input-group">
-                                            <span class="input-group-text" id="basic-addon4"><span class="fas fa-envelope"></span></span>
+                                            <span class="input-group-text" id="basic-addon4"><span class="fas fa-envelope text-eucalypt"></span></span>
                                             <input type="email" class="form-control" placeholder="example@company.com" id="email" required>
                                         </div>
                                     </div>
@@ -282,7 +163,7 @@
                                     </div>
                                     <!-- End of Form -->
                                     <div class="d-grid">
-                                        <button type="submit" class="btn btn-secondary">Send message</button>
+                                        <button type="submit" class="btn rounded btn-primary">Let's Connect</button>
                                     </div>
                                 </form>
                             </div>
@@ -301,7 +182,7 @@
 
     {% block footer %}
     
-        {% include 'includes/cta-footer.html' %}
+        {% include 'includes/footer.html' %}
     
     {% endblock footer %}
 
