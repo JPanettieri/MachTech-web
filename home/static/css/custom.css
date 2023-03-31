@@ -56,7 +56,13 @@ img{
 
 .display-2{
 font-size: calc(3rem + 2.7vw)!important;
-margin-right: 50%!important;
+margin-right: 50%;
+}
+
+.wide{
+    margin-right: 0%!important;
+    font-weight: 600;
+    font-size: calc(3rem + 2.7vw)!important;
 }
 
 .display-medium{
