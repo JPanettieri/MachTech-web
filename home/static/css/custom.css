@@ -89,6 +89,18 @@ margin-left: 30%;
     font-family:"Nunito Sans", sans-serif;
 }
 
+.plain-h{
+    font-weight: 600;
+    font-size: xx-large;
+    font-family:"Nunito Sans", sans-serif;
+}
+
+.plain-h2{
+    font-weight: 600;
+    font-size: x-large;
+    font-family:"Nunito Sans", sans-serif;
+}
+
 .huge{
     font-size: 4rem;
 }

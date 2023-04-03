@@ -9,7 +9,7 @@ urlpatterns = [
     path('', views.index),
     path('about-us/', views.abouts_us, name='about_us'),
     path('contact-us/', views.contact_us, name='contact_us'),
-    path('what-we-do/', views.what, name='what-we-do'),
+    path('what_we_do/', views.what_we_do, name='what_we_do'),
     path('blank/', views.blank_page, name='blank'),
 
     # Components

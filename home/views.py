@@ -1,5 +1,8 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.core.mail import send_mail, BadHeaderError
+from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import render, redirect
+from .models import Contact
+
 
 # Create your views here.
 
@@ -11,13 +14,64 @@ def index(request):
 # Pages
 
 def abouts_us(request):
-  return render(request, 'pages/about.html')
+  context = {}
+  if request.method == 'POST':
+    name = request.POST.get('cname')
+    email = request.POST.get('cemail')
+    message = request.POST.get('cmessage')
+    try:
+      send_mail(
+          subject = f"New contact message from {name}",
+          message = f"Message content: {message}\n from: {name}\n email: {email}",
+          from_email = 'connect@zenixion.dev',
+          recipient_list=['connect@zenixion.dev'],
+          fail_silently=False,
+      )
+    except BadHeaderError:
+      return HttpResponse('Invalid header found.')
+    context['show_modal'] = True
+  return render(request, 'pages/about.html', context)
+
 
 def contact_us(request):
-  return render(request, 'pages/contact.html')
+  context = {}
+  if request.method == 'POST':
+    name = request.POST.get('cname')
+    email = request.POST.get('cemail')
+    message = request.POST.get('cmessage')
+    try:
+      send_mail(
+        subject = f"New contact message from {name}",
+          message = f"Message content: {message}\n from: {name}\n email: {email}",
+        from_email = 'connect@zenixion.dev',
+        recipient_list=['connect@zenixion.dev'], 
+        fail_silently=False,
+      )
+    except BadHeaderError:
+      return HttpResponse('Invalid header found.')
+    context['show_modal'] = True
+  return render(request, 'pages/contact.html', context)
 
-def what(request):
-  return render(request, 'pages/what_we_do.html')
+
+def what_we_do(request):
+  context = {}
+  if request.method == 'POST':
+    name = request.POST.get('cname')
+    email = request.POST.get('cemail')
+    message = request.POST.get('cmessage')
+    try:
+      send_mail(
+          subject = f"New contact message from {name}",
+          message = f"Message content: {message}\n from: {name}\n email: {email}",
+          from_email = 'connect@zenixion.dev',
+          recipient_list=['connect@zenixion.dev'],
+          fail_silently=False,
+      )
+    except BadHeaderError:
+      return HttpResponse('Invalid header found.')
+    context['show_modal'] = True
+  return render(request, 'pages/what_we_do.html', context)
+
 
 def blank_page(request):
   return render(request, 'pages/blank.html')

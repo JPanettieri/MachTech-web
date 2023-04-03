@@ -15,10 +15,10 @@
                         <p class="para mb-4 text-muted">We offer complete software solutions for all your business needs. </p>
                         <p class="para mb-4 text-muted">From customized software development to enterprise-level solutions, and everything in between. </p>
                         <p class="para mb-4 text-muted">Our team will work closely with you to understand your business needs and deliver customized software solutions that meet your exact requirements.</p>
-                        <a href="{% url 'what-we-do' %}" class="btn btn-outline-secondary me-3 animate-up-2">What we do <span class="ms-2"><span class="fas fa-arrow-right"></span></span></a>
+                        <a href="{% url 'what_we_do' %}" class="btn btn-outline-secondary me-3 animate-up-2">What we do <span class="ms-2"><span class="fas fa-arrow-right"></span></span></a>
                     </div>
                     <div class="col-12 col-md-5 d-none d-md-block text-center">
-                        <img class="bg-custom-light mt-2" src="{% static 'assets/img/programmer-writing-code.png' %}" alt="">
+                        <img class="bg-custom-light mt-2" src="{% static 'assets/img/programmer-writing-code.png' %}" alt="programmer writting code">
                     </div>
                </div>
             </div>
@@ -42,7 +42,7 @@
                                 <p class="para text-eucalypt">Our culture of collaboration is supported by our passion for programming and exploration of new technologies. We are constantly keeping up with the latest trends and techniques to provide cutting-edge solutions. And, with our friendly approach and positive attitude, We make sure our clients enjoy the journey with us.</p>
                             </div>
                             </div>
-                        <p class="lead text-eucalypt mt-2">At ZenixION, We are not just a programmers, We are your partner in success. Working together, we can achieve anything. 
+                        <p class="lead text-eucalypt mt-2">At ZenixION, We are not just programmers, We are your partner in success. Working together, We can achieve anything. 
                             So, if you're looking for a team who can tackle any challenge with ease, look no further..</p>
                     </div>
                 </div>
@@ -137,43 +137,53 @@
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-12 col-lg-8">
+                        {% if show_modal %}
+                        <script>
+                          $(document).ready(function(){
+                            $("#contactFormModal").modal("show");
+                            show_modal = False
+                          });
+                        </script>
+                        {% endif %}
+              
                         <!-- Contact Card -->
                         <div class="card border-0 p-2 p-md-3 p-lg-5">
-                            <div class="card-header bg-white border-0 text-center">
-                                <h2 class="text-eucalypt">Have a project in mind?</h2>
-                                <h2 class="text-eucalypt">Need help with an issue?</h2>
-                                <p class="text-eucalypt">Let’s talk about it and see how we can help.</p>
-                            </div>
-                            <div class="card-body px-0 pt-0">
-                                <form action="#">
-                                    <!-- Form -->
-                                    <div class="mb-4">
-                                        <label for="name">Your Name</label>
-                                        <div class="input-group">
-                                            <span class="input-group-text" id="basic-addon3"><span class="fas fa-user-circle text-eucalypt"></span></span>
-                                            <input type="text" class="form-control" placeholder="e.g. John Smith" id="name" required>
-                                        </div>
-                                    </div>
-                                    <!-- End of Form -->
-                                    <!-- Form -->
-                                    <div class="mb-4">
-                                        <label for="email">Your Email</label>
-                                        <div class="input-group">
-                                            <span class="input-group-text" id="basic-addon4"><span class="fas fa-envelope text-eucalypt"></span></span>
-                                            <input type="email" class="form-control" placeholder="example@company.com" id="email" required>
-                                        </div>
-                                    </div>
-                                    <!-- End of Form -->
-                                    <div class="mb-4">
-                                        <label for="message">Your Message</label>
-                                        <textarea placeholder="Your message" class="form-control" id="message" rows="4" required></textarea>
-                                    </div>
-                                    <!-- End of Form -->
-                                    <div class="d-grid">
-                                        <button type="submit" class="btn rounded btn-primary">Let's Connect</button>
-                                    </div>
-                                </form>
-                            </div>
+                          <div class="card-header bg-white border-0 text-center">
+                            <h2 class="plain-h text-eucalypt">Have a project in mind?</h2>
+                            <h2 class="plain-h text-eucalypt">Need help with an issue?</h2>
+                            <p class="text-eucalypt">Let’s talk about it and see how we can help.</p>
+                          </div>
+                          <div class="card-body plain-h2 px-0 pt-0">
+                            <form method="post" action="{% url 'about_us' %}">
+                              {% csrf_token %}
+                              <!-- Form -->
+                              <div class="mb-4">
+                                <label for="name">Your Name</label>
+                                <div class="input-group">
+                                  <span class="input-group-text" id="basic-addon3"><span class="fas fa-user-circle text-eucalypt"></span></span>
+                                  <input type="text" class="form-control" placeholder="e.g. John Smith" name="cname" id="cname" required>
+                                </div>
+                              </div>
+                              <!-- End of Form -->
+                              <!-- Form -->
+                              <div class="mb-4">
+                                <label for="email">Your Email</label>
+                                <div class="input-group">
+                                  <span class="input-group-text" id="basic-addon4"><span class="fas fa-envelope text-eucalypt"></span></span>
+                                  <input type="email" class="form-control" placeholder="example@company.com" name="cemail" id="cemail" required>
+                                </div>
+                              </div>
+                              <!-- End of Form -->
+                              <div class="mb-4">
+                                <label for="message">Your Message</label>
+                                <textarea placeholder="Your message" class="form-control" name="cmessage" id="cmessage" rows="4" required></textarea>
+                              </div>
+                              <!-- End of Form -->
+                              <div class="d-grid">
+                                <button type="submit" class="btn rounded btn-primary">Let's Connect</button>
+                              </div>
+                            </form>
+                          </div>
                         </div>
                         <!-- End of Contact Card -->
                     </div>
@@ -182,6 +192,23 @@
         </section>
         <!-- End of section -->
     </main>
+
+         <!-- Modal -->
+         <div class="modal fade" id="contactFormModal" tabindex="-1" aria-labelledby="contactModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title plain-h2 text-eucalypt">Contact Sent Successfully</h5>
+                    </div>
+                    <div class="modal-body para text-eucalypt">
+                    Thank you for contacting us.<br> We will be in touch as soon as possible.
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     {% include 'includes/cta-careers.html' %}
 
@@ -192,5 +219,7 @@
         {% include 'includes/footer.html' %}
     
     {% endblock footer %}
+
+
 
 

@@ -9,10 +9,13 @@
         <!-- Hero -->
         <section class="section section-header pb-11 bg-primary text-white">
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-12 col-xl-8 text-center">
-                        <h1 class="display-2 mb-3">Get in Touch Today</h1>
-                        <p class="lead fw-bold">Do you have a new project in mind? Let's connect and discuss your needs. We guarantee a prompt response!</p>        
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-12">
+                        <div class="header-wrapper">
+                            <h1 class="display-2 mb-3">Get in Touch Today</h1>
+                            <img class="organic-radius img-fluid" src="{% static 'assets/img/contact.png' %}" alt="great idea">
+                            <h5 class="fw-normal para text-pale" style="grid-column: 1 / -1;">Do you have a new project in mind? Let's connect and discuss your needs.<br> We guarantee a prompt response!</h5>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -27,55 +30,82 @@
                 </div>
             </div>
         </div>
-        <!-- Section -->
         <section class="section section-lg pt-6">
             <div class="container">
-                <div class="row justify-content-center mb-5 mb-lg-6">
-                    <div class="col-12 col-lg-8">
-                        <!-- Contact Card -->
-                        <div class="card border-0 p-2 p-md-3 p-lg-5">
-                            <div class="card-header bg-white border-0 text-center">
-                                <h2 class="text-eucalypt">Have a project in mind?</h2>
-                                <h2 class="text-eucalypt">Need help with an issue?</h2>
-                                <p class="text-eucalypt">Let’s talk about it and see how we can help.</p>
-                            </div>
-                            <div class="card-body px-0 pt-0">
-                                <form action="#">
-                                    <!-- Form -->
-                                    <div class="mb-4">
-                                        <label for="name">Your Name</label>
-                                        <div class="input-group">
-                                            <span class="input-group-text" id="basic-addon3"><span class="fas fa-user-circle text-eucalypt"></span></span>
-                                            <input type="text" class="form-control" placeholder="e.g. John Smith" id="name" required>
-                                        </div>
-                                    </div>
-                                    <!-- End of Form -->
-                                    <!-- Form -->
-                                    <div class="mb-4">
-                                        <label for="email">Your Email</label>
-                                        <div class="input-group">
-                                            <span class="input-group-text" id="basic-addon4"><span class="fas fa-envelope text-eucalypt"></span></span>
-                                            <input type="email" class="form-control" placeholder="example@company.com" id="email" required>
-                                        </div>
-                                    </div>
-                                    <!-- End of Form -->
-                                    <div class="mb-4">
-                                        <label for="message">Your Message</label>
-                                        <textarea placeholder="Your message" class="form-control" id="message" rows="4" required></textarea>
-                                    </div>
-                                    <!-- End of Form -->
-                                    <div class="d-grid">
-                                        <button type="submit" class="btn rounded btn-primary">Let's Connect</button>
-                                    </div>
-                                </form>
-                            </div>
+              <div class="row justify-content-center mb-5 mb-lg-6">
+                <div class="col-12 col-lg-8">
+                  {% if show_modal %}
+                  <script>
+                    $(document).ready(function(){
+                      $("#contactFormModal").modal("show");
+                      show_modal = False
+                    });
+                  </script>
+                  {% endif %}
+        
+                  <!-- Contact Card -->
+                  <div class="card border-0 p-2 p-md-3 p-lg-5">
+                    <div class="card-header bg-white border-0 text-center">
+                      <h2 class="plain-h text-eucalypt">Have a project in mind?</h2>
+                      <h2 class="plain-h text-eucalypt">Need help with an issue?</h2>
+                      <p class="text-eucalypt">Let’s talk about it and see how we can help.</p>
+                    </div>
+                    <div class="card-body plain-h2 px-0 pt-0">
+                      <form method="post" action="{% url 'contact_us' %}">
+                        {% csrf_token %}
+                        <!-- Form -->
+                        <div class="mb-4">
+                          <label for="name">Your Name</label>
+                          <div class="input-group">
+                            <span class="input-group-text" id="basic-addon3"><span class="fas fa-user-circle text-eucalypt"></span></span>
+                            <input type="text" class="form-control" placeholder="e.g. John Smith" name="cname" id="cname" required>
+                          </div>
                         </div>
-                        <!-- End of Contact Card -->
+                        <!-- End of Form -->
+                        <!-- Form -->
+                        <div class="mb-4">
+                          <label for="email">Your Email</label>
+                          <div class="input-group">
+                            <span class="input-group-text" id="basic-addon4"><span class="fas fa-envelope text-eucalypt"></span></span>
+                            <input type="email" class="form-control" placeholder="example@company.com" name="cemail" id="cemail" required>
+                          </div>
+                        </div>
+                        <!-- End of Form -->
+                        <div class="mb-4">
+                          <label for="message">Your Message</label>
+                          <textarea placeholder="Your message" class="form-control" name="cmessage" id="cmessage" rows="4" required></textarea>
+                        </div>
+                        <!-- End of Form -->
+                        <div class="d-grid">
+                          <button type="submit" class="btn rounded btn-primary">Let's Connect</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <!-- End of Contact Card -->
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- End of section -->
+    </main>
+        
+          <!-- Modal -->
+        <div class="modal fade" id="contactFormModal" tabindex="-1" aria-labelledby="contactModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title plain-h2 text-eucalypt">Contact Sent Successfully</h5>
+                    </div>
+                    <div class="modal-body para text-eucalypt">
+                    Thank you for contacting us.<br> We will be in touch as soon as possible.
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- End of section -->
-    </main>
+        </div>
 
-    {% endblock content %}
+                  
+{% endblock content %}
