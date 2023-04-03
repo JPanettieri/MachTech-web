@@ -1,5 +1,0 @@
-env:
-  DEBUG: "False"
-
-build:
-  dockerfile: Dockerfile
