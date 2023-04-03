@@ -37,7 +37,7 @@ ALLOWED_HOSTS = ['*']
 # Start the development server
 if __name__ == '__main__':
     from django.core.management import execute_from_command_line
-    execute_from_command_line(['manage.py', 'runserver', '0.0.0.0:{}'.format(PORT)])
+    execute_from_command_line(['manage.py', 'runserver', 'localhost:{}'.format(PORT)])
 
 # Add here your deployment HOSTS
 CSRF_TRUSTED_ORIGINS = [
