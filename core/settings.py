@@ -31,23 +31,13 @@ if not SECRET_KEY:
 # Render Deployment Code
 DEBUG = os.environ.get('DEBUG')
 
-PORT = int(os.environ.get("PORT", 8000))
-ALLOWED_HOSTS = ['*']
-
-# Start the development server
-if __name__ == '__main__':
-    from django.core.management import execute_from_command_line
-    execute_from_command_line(['manage.py', 'runserver', 'localhost:{}'.format(PORT)])
+ALLOWED_HOSTS = ['www.zenixion.dev']
 
 # Add here your deployment HOSTS
 CSRF_TRUSTED_ORIGINS = [
-    'http://0.0.0.0:8080',
-    'https://www.zenixion.dev',
-]
 
-RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
-if RENDER_EXTERNAL_HOSTNAME:    
-    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
+    'www.zenixion.dev',
+]
 
 # Application definition
 
@@ -58,7 +48,6 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    'livereload',
     'theme_pixel',
     "home",
 ]
@@ -72,7 +61,6 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    'livereload.middleware.LiveReloadScript',
 ]
 
 ROOT_URLCONF = "core.urls"
