@@ -29,15 +29,9 @@ if not SECRET_KEY:
     SECRET_KEY = ''.join(random.choice( string.ascii_lowercase  ) for i in range( 32 ))
 
 # Render Deployment Code
-DEBUG = 'RENDER' not in os.environ
+DEBUG = os.environ.get('DEBUG')
 
-PORT = int(os.environ.get("PORT", 8000))
 ALLOWED_HOSTS = ['*']
-
-# Start the development server
-if __name__ == '__main__':
-    from django.core.management import execute_from_command_line
-    execute_from_command_line(['manage.py', 'runserver', '0.0.0.0:{}'.format(PORT)])
 
 # Add here your deployment HOSTS
 CSRF_TRUSTED_ORIGINS = ['0.0.0.0:8080', 'www.zenixion.dev']
@@ -176,5 +170,5 @@ EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'apikey'
-EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD'     , None)
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', None)
 
