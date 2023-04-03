@@ -31,7 +31,7 @@ if not SECRET_KEY:
 # Render Deployment Code
 DEBUG = os.environ.get('DEBUG')
 
-ALLOWED_HOSTS = ['www.zenixion.dev']
+ALLOWED_HOSTS = ['*']
 
 # Add here your deployment HOSTS
 CSRF_TRUSTED_ORIGINS = ['www.zenixion.dev']
