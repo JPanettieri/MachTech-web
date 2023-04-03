@@ -34,7 +34,7 @@ DEBUG = os.environ.get('DEBUG')
 ALLOWED_HOSTS = ['*']
 
 # Add here your deployment HOSTS
-CSRF_TRUSTED_ORIGINS = ['www.zenixion.dev']
+CSRF_TRUSTED_ORIGINS = ['https://www.zenixion.dev']
 
 # Application definition
 
