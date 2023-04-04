@@ -5,7 +5,14 @@
     <main>
 
         {% include 'includes/pre-loader.html' %}
-
+        {% if show_modal_subscribe %}
+        <script>
+          $(document).ready(function(){
+            $("#subscribeFormModal").modal("show");
+            show_modal_subscribe = False
+          });
+        </script>
+        {% endif %}
         <!-- Hero -->
         <section class="section section-header pb-11 bg-primary text-white">
             <div class="container">
@@ -105,6 +112,22 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="subscribeFormModal" tabindex="-1" aria-labelledby="subscribeModal" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title plain-h2 text-eucalypt">Subscription Successful</h5>
+                </div>
+                <div class="modal-body para text-eucalypt">
+                Thank you for Subscribing.
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+          </div>
         </div>
 
                   
