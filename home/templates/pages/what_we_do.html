@@ -12,6 +12,13 @@
             show_modal_subscribe = False
           });
         </script>
+        {% elif show_modal %}
+        <script>
+          $(document).ready(function(){
+            $("#contactFormModal").modal("show");
+            show_modal = False
+          });
+        </script>
         {% endif %}
         <!-- Hero -->
         <div class="section-header bg-primary pb-0">
@@ -264,15 +271,7 @@
                 <!-- Contact Card -->
                 <div class="row justify-content-center">
                     <div class="col-12 col-lg-8 mb-8">
-                        {% if show_modal %}
-                  <script>
-                    $(document).ready(function(){
-                      $("#contactFormModal").modal("show");
-                      show_modal = False
-                    });
-                  </script>
-                  {% endif %}
-        
+
                   <!-- Contact Card -->
                   <div class="card border-0 p-2 p-md-3 p-lg-5">
                     <div class="card-header bg-white border-0 text-center">
