@@ -16,7 +16,7 @@ def index(request):
       try:
         send_mail(
           subject = f"New contact message from {name}",
-            message = f"Message content: {message}\n from: {name}\n email: {email}",
+          message = f"Message content: {message}\n from: {name}\n email: {email}",
           from_email = 'connect@zenixion.dev',
           recipient_list=['connect@zenixion.dev'], 
           fail_silently=False,)
@@ -24,10 +24,11 @@ def index(request):
         return HttpResponse('Invalid header found.')
       context['show_modal'] = True
     elif 'subscribe_submit' in request.POST:
-      email = request.POST.get('email')
+      email = request.POST.get('subEmail')
       try:
         send_mail(
-          subject = f"New subscribtion from {email}",
+          subject = f"New subscription from {email}",
+          message = f"Message content: {message}\n from: {name}\n email: {email}",
           from_email = 'connect@zenixion.dev',
           recipient_list=['connect@zenixion.dev'], 
           fail_silently=False,)
@@ -49,7 +50,7 @@ def abouts_us(request):
       try:
         send_mail(
           subject = f"New contact message from {name}",
-            message = f"Message content: {message}\n from: {name}\n email: {email}",
+          message = f"Message content: {message}\n from: {name}\n email: {email}",
           from_email = 'connect@zenixion.dev',
           recipient_list=['connect@zenixion.dev'], 
           fail_silently=False,)
@@ -57,10 +58,11 @@ def abouts_us(request):
         return HttpResponse('Invalid header found.')
       context['show_modal'] = True
     elif 'subscribe_submit' in request.POST:
-      email = request.POST.get('email')
+      email = request.POST.get('subEmail')
       try:
         send_mail(
-          subject = f"New subscribtion from {email}",
+          subject = f"New subscription from {email}",
+          message = f"Message content: {message}\n from: {name}\n email: {email}",
           from_email = 'connect@zenixion.dev',
           recipient_list=['connect@zenixion.dev'], 
           fail_silently=False,)
@@ -80,7 +82,7 @@ def contact_us(request):
       try:
         send_mail(
           subject = f"New contact message from {name}",
-            message = f"Message content: {message}\n from: {name}\n email: {email}",
+          message = f"Message content: {message}\n from: {name}\n email: {email}",
           from_email = 'connect@zenixion.dev',
           recipient_list=['connect@zenixion.dev'], 
           fail_silently=False,)
@@ -88,10 +90,11 @@ def contact_us(request):
         return HttpResponse('Invalid header found.')
       context['show_modal'] = True
     elif 'subscribe_submit' in request.POST:
-      email = request.POST.get('email')
+      email = request.POST.get('subEmail')
       try:
         send_mail(
-          subject = f"New subscribtion from {email}",
+          subject = f"New subscription from {email}",
+          message = f"Message content: {message}\n from: {name}\n email: {email}",
           from_email = 'connect@zenixion.dev',
           recipient_list=['connect@zenixion.dev'], 
           fail_silently=False,)
@@ -111,7 +114,7 @@ def what_we_do(request):
       try:
         send_mail(
           subject = f"New contact message from {name}",
-            message = f"Message content: {message}\n from: {name}\n email: {email}",
+          message = f"Message content: {message}\n from: {name}\n email: {email}",
           from_email = 'connect@zenixion.dev',
           recipient_list=['connect@zenixion.dev'], 
           fail_silently=False,)
@@ -119,10 +122,11 @@ def what_we_do(request):
         return HttpResponse('Invalid header found.')
       context['show_modal'] = True
     elif 'subscribe_submit' in request.POST:
-      email = request.POST.get('email')
+      email = request.POST.get('subEmail')
       try:
         send_mail(
-          subject = f"New subscribtion from {email}",
+          subject = f"New subscription from {email}",
+          message = f"Message content: {message}\n from: {name}\n email: {email}",
           from_email = 'connect@zenixion.dev',
           recipient_list=['connect@zenixion.dev'], 
           fail_silently=False,)
