@@ -28,7 +28,7 @@ def index(request):
       try:
         send_mail(
           subject = f"New subscription from {email}",
-          message = f"Message content: {message}\n from: {name}\n email: {email}",
+          message = f"New subscription from\n from: {email}",
           from_email = 'connect@zenixion.dev',
           recipient_list=['connect@zenixion.dev'], 
           fail_silently=False,)
@@ -62,7 +62,7 @@ def abouts_us(request):
       try:
         send_mail(
           subject = f"New subscription from {email}",
-          message = f"Message content: {message}\n from: {name}\n email: {email}",
+          message = f"New subscription from\n from: {email}",
           from_email = 'connect@zenixion.dev',
           recipient_list=['connect@zenixion.dev'], 
           fail_silently=False,)
@@ -94,7 +94,7 @@ def contact_us(request):
       try:
         send_mail(
           subject = f"New subscription from {email}",
-          message = f"Message content: {message}\n from: {name}\n email: {email}",
+          message = f"New subscription from\n from: {email}",
           from_email = 'connect@zenixion.dev',
           recipient_list=['connect@zenixion.dev'], 
           fail_silently=False,)
@@ -126,7 +126,7 @@ def what_we_do(request):
       try:
         send_mail(
           subject = f"New subscription from {email}",
-          message = f"Message content: {message}\n from: {name}\n email: {email}",
+          message = f"New subscription from\n from: {email}",
           from_email = 'connect@zenixion.dev',
           recipient_list=['connect@zenixion.dev'], 
           fail_silently=False,)
