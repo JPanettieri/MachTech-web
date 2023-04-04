@@ -7,69 +7,128 @@ from .models import Contact
 # Create your views here.
 
 def index(request):
+  context = {}
+  if request.method == 'POST':
+    if 'contact_submit' in request.POST:
+      name = request.POST.get('cname')
+      email = request.POST.get('cemail')
+      message = request.POST.get('cmessage')
+      try:
+        send_mail(
+          subject = f"New contact message from {name}",
+            message = f"Message content: {message}\n from: {name}\n email: {email}",
+          from_email = 'connect@zenixion.dev',
+          recipient_list=['connect@zenixion.dev'], 
+          fail_silently=False,)
+      except BadHeaderError:
+        return HttpResponse('Invalid header found.')
+      context['show_modal'] = True
+    elif 'subscribe_submit' in request.POST:
+      email = request.POST.get('email')
+      try:
+        send_mail(
+          subject = f"New subscribtion from {email}",
+          from_email = 'connect@zenixion.dev',
+          recipient_list=['connect@zenixion.dev'], 
+          fail_silently=False,)
+      except BadHeaderError:
+        return HttpResponse('Invalid header found.')
+      context['show_modal_subscribe'] = True
+  return render(request, 'pages/index.html', context)
 
-    # Page from the theme 
-    return render(request, 'pages/index.html')
 
 # Pages
 
 def abouts_us(request):
   context = {}
   if request.method == 'POST':
-    name = request.POST.get('cname')
-    email = request.POST.get('cemail')
-    message = request.POST.get('cmessage')
-    try:
-      send_mail(
+    if 'contact_submit' in request.POST:
+      name = request.POST.get('cname')
+      email = request.POST.get('cemail')
+      message = request.POST.get('cmessage')
+      try:
+        send_mail(
           subject = f"New contact message from {name}",
-          message = f"Message content: {message}\n from: {name}\n email: {email}",
+            message = f"Message content: {message}\n from: {name}\n email: {email}",
           from_email = 'connect@zenixion.dev',
-          recipient_list=['connect@zenixion.dev'],
-          fail_silently=False,
-      )
-    except BadHeaderError:
-      return HttpResponse('Invalid header found.')
-    context['show_modal'] = True
+          recipient_list=['connect@zenixion.dev'], 
+          fail_silently=False,)
+      except BadHeaderError:
+        return HttpResponse('Invalid header found.')
+      context['show_modal'] = True
+    elif 'subscribe_submit' in request.POST:
+      email = request.POST.get('email')
+      try:
+        send_mail(
+          subject = f"New subscribtion from {email}",
+          from_email = 'connect@zenixion.dev',
+          recipient_list=['connect@zenixion.dev'], 
+          fail_silently=False,)
+      except BadHeaderError:
+        return HttpResponse('Invalid header found.')
+      context['show_modal_subscribe'] = True
   return render(request, 'pages/about.html', context)
 
 
 def contact_us(request):
   context = {}
   if request.method == 'POST':
-    name = request.POST.get('cname')
-    email = request.POST.get('cemail')
-    message = request.POST.get('cmessage')
-    try:
-      send_mail(
-        subject = f"New contact message from {name}",
-          message = f"Message content: {message}\n from: {name}\n email: {email}",
-        from_email = 'connect@zenixion.dev',
-        recipient_list=['connect@zenixion.dev'], 
-        fail_silently=False,
-      )
-    except BadHeaderError:
-      return HttpResponse('Invalid header found.')
-    context['show_modal'] = True
+    if 'contact_submit' in request.POST:
+      name = request.POST.get('cname')
+      email = request.POST.get('cemail')
+      message = request.POST.get('cmessage')
+      try:
+        send_mail(
+          subject = f"New contact message from {name}",
+            message = f"Message content: {message}\n from: {name}\n email: {email}",
+          from_email = 'connect@zenixion.dev',
+          recipient_list=['connect@zenixion.dev'], 
+          fail_silently=False,)
+      except BadHeaderError:
+        return HttpResponse('Invalid header found.')
+      context['show_modal'] = True
+    elif 'subscribe_submit' in request.POST:
+      email = request.POST.get('email')
+      try:
+        send_mail(
+          subject = f"New subscribtion from {email}",
+          from_email = 'connect@zenixion.dev',
+          recipient_list=['connect@zenixion.dev'], 
+          fail_silently=False,)
+      except BadHeaderError:
+        return HttpResponse('Invalid header found.')
+      context['show_modal_subscribe'] = True
   return render(request, 'pages/contact.html', context)
 
 
 def what_we_do(request):
   context = {}
   if request.method == 'POST':
-    name = request.POST.get('cname')
-    email = request.POST.get('cemail')
-    message = request.POST.get('cmessage')
-    try:
-      send_mail(
+    if 'contact_submit' in request.POST:
+      name = request.POST.get('cname')
+      email = request.POST.get('cemail')
+      message = request.POST.get('cmessage')
+      try:
+        send_mail(
           subject = f"New contact message from {name}",
-          message = f"Message content: {message}\n from: {name}\n email: {email}",
+            message = f"Message content: {message}\n from: {name}\n email: {email}",
           from_email = 'connect@zenixion.dev',
-          recipient_list=['connect@zenixion.dev'],
-          fail_silently=False,
-      )
-    except BadHeaderError:
-      return HttpResponse('Invalid header found.')
-    context['show_modal'] = True
+          recipient_list=['connect@zenixion.dev'], 
+          fail_silently=False,)
+      except BadHeaderError:
+        return HttpResponse('Invalid header found.')
+      context['show_modal'] = True
+    elif 'subscribe_submit' in request.POST:
+      email = request.POST.get('email')
+      try:
+        send_mail(
+          subject = f"New subscribtion from {email}",
+          from_email = 'connect@zenixion.dev',
+          recipient_list=['connect@zenixion.dev'], 
+          fail_silently=False,)
+      except BadHeaderError:
+        return HttpResponse('Invalid header found.')
+      context['show_modal_subscribe'] = True
   return render(request, 'pages/what_we_do.html', context)
 
 
