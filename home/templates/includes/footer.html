@@ -4,48 +4,24 @@
   <div class="container">
       <div class="row">
           <div class="col-md-4">
-              <img class="navbar-brand-dark mb-4" height="35" src="{% static 'assets/img/logoShort.jpg' %}"
+              <img class="navbar-brand-dark mb-4" height="75" src="{% static 'assets/img/transparentLogo.png' %}"
                   alt="Logo light">
-              <p>ZenixION is a software development company founded with the sole purpose of taking the stress out of 
-                software development projects for its customers.This is particularly important in today's world where 
-                technology complexity is increasing daily.</p>
-              <ul class="social-buttons mb-5 mb-lg-0">
-                  <li>
-                      <a href="https://github.com/jpanettieri" aria-label="github social link" class="icon-white me-2">
-                          <span class="fab fa-github"></span>
-                      </a>
-                  </li>
-              </ul>
           </div>
           <div class="col-6 col-md-2 mb-5 mb-lg-0">
-              <span class="h5">ZenixION</span>
+              <span class="h5">Machinery Techniques</span>
               <ul class="footer-links mt-2">
-                  <li><a target="_blank" href="https://weatherml.com/blog">Blog</a></li>
-                  <li><a target="_blank" href="https://www.jpanettieri.dev">Portfolio</a></li>
-                  <li><a target="_blank" href="{% url 'contact_us' %}">Contact Us</a></li>
+                  <li><a href="{% url 'index' %}">About</a></li>
+                  <li><a href="{% url 'about_us' %}">Services</a></li>
+                  <li><a href="{% url 'what_we_do' %}">Products</a></li>
+                  <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
               </ul>
           </div>
           <div class="col-12 col-md-4 mb-5 mb-lg-0">
-              <span class="h5 plain-h">Subscribe</span>
-              <p class="text-muted font-small mt-2">Join our mailing list. We write rarely, but only the best content.
-              </p>
-              <form method="post" action="">
-                {% csrf_token %}
-                  <div class="form-row mb-2">
-                      <div class="col-12">
-                          <label class="h6 fw-normal text-muted d-none" for="subEmail">Email address</label>
-                          <input type="email" class="form-control para mb-2" placeholder="example@company.com" name="subEmail"
-                              aria-label="Subscribe form" id="subEmail" required>
-                      </div>
-                      <div class="col-12 d-grid">
-                          <button type="submit" name="subscribe_submit" id="subscribe_submit" class="btn btn-tertiary" data-loading-text="Sending">
-                              <span>Subscribe</span>
-                          </button>
-                      </div>
-                  </div>
-              </form>
-              <p class="text-muted font-small m-0">We’ll never share your details. See our <a class="text-white"
-                      href="#">Privacy Policy</a></p>
+              <span class="h5 plain-h">Contact</span>
+              <p class="text-muted font-small mt-2">Joshua Panettieri</p>
+              <p class="text-muted font-small mt-2">Service Engineer</p>
+              <p class="text-muted font-small mt-2">M. +61 (0)430-016527</p>
+              <a class="text-white" href="mailto:joshua@mach-tech.com.au">E: joshua@mach-tech.com.au</a>
           </div>
       </div>
   </div>

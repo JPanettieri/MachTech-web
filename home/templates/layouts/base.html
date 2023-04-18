@@ -22,15 +22,18 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!-- Primary Meta Tags -->
-    <title>ZenixION - Software made easy.</title>
+    <title>Machinery Techniques - Committed to Excellence.</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="title" content="ZenixION - Software made easy.">
+    <meta name="title" content="Machinery Techniques - Committed to Excellence.">
     <meta name="author" content="Joshua Panettieri">
-    <meta name="description" content="Software Development Services for all industries">
-
+    <meta name="description" content="Precision Automation Equipment and Service">
+    <meta name="viewport" content="width=1600, maximum-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="{% static 'assets/img/transparentLogo.png' %}" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
         
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="{% static 'assets/img/favicon/logoShort.ico' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/img/transparentLogo.png' %}">
     
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/807714665f.js" crossorigin="anonymous"></script>
@@ -41,7 +44,6 @@
     <link type="text/css" href="{% static 'css/pixel.css' %}" rel="stylesheet">
     
     <!-- Custom CSS -->
-    <link type="text/css" href="{% static 'css/custom.css' %}" rel="stylesheet">
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -50,23 +52,11 @@
 
 <body>
 
-  {% block header %}
-  
-    {% include 'includes/navigation.html' %}
-  
-  {% endblock header %}
-
   {% block content %}{% endblock content %}
-
-  {% block footer %}
-  
-    {% include 'includes/footer.html' %}
-  
-  {% endblock footer %}
-
+  {% include 'includes/navigation.html' %}
   {% include 'includes/scripts.html' %}
   {% block javascripts %}{% endblock javascripts %}
-
+  {% include 'includes/footer.html' %}
 
 </body>
 

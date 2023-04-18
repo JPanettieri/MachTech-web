@@ -1,0 +1,153 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+    <main>
+
+      {% include 'includes/navigation.html' %}
+        {% if show_modal_subscribe %}
+        <script>
+          $(document).ready(function(){
+            $("#subscribeFormModal").modal("show");
+            show_modal_subscribe = False
+          });
+        </script>
+        {% elif show_modal %}
+        <script>
+          $(document).ready(function(){
+            $("#contactFormModal").modal("show");
+            show_modal = False
+          });
+        </script>
+        {% endif %}
+        <!-- Hero -->
+        <body style="margin: 0; background: #000000">
+          <input type="hidden" id="anPageName" name="page" value="contact" />
+          <div class="mt-8 container-center-horizontal">
+            <div class="contact screen">
+              <div class="overlap-group3">
+                <img class="vector-1" src= "{% static 'assets/img/vector-1.svg' %}" alt="Vector 1" />
+                <div class="get-in-touch banner-font">Get In Touch...</div>
+                <p class="at-machinery-techniq">
+                  At Machinery Techniques, we value open communication and are always ready to assist with any questions or
+                  concerns you may have. Whether you need support with technical sales or services, have questions about our
+                  products, or simply want to learn more about our company, we are here to help. <br /><br />Our team of
+                  experts is dedicated to providing personalized support to meet your unique needs. Contact us today via
+                  phone, email, or through the form on this page, and let us know how we can assist you. <br /><br />We look
+                  forward to hearing from you...
+                </p>
+                <div class="heading">
+                  <h1 class="title valign-text-middle">Let us Help you!</h1>
+                  <p class="we-always-try-to-res valign-text-middle">We always try to respond within 24 hours.</p>
+                </div>
+              </div>
+              <div class="overlap-group2">
+                <div class="form-field">
+                  <div class="name">
+                    <div class="overlap-group">
+                      <img class="rectangle-13" src= "{% static 'assets/img/rectangle-13.svg' %}" alt="Rectangle 13" />
+                      <div class="name-1 valign-text-middle varela-normal-white-48px">Name:</div>
+                    </div>
+                  </div>
+                  <div class="email-address">
+                    <img class="rectangle-13-1 rectangle-13-3" src= "{% static 'assets/img/rectangle-13-1.svg' %}" alt="Rectangle 13" />
+                    <div class="email valign-text-middle varela-normal-white-48px">Email:</div>
+                  </div>
+                  <div class="phone-number">
+                    <div class="overlap-group1">
+                      <img class="rectangle-13-2 rectangle-13-3" src= "{% static 'assets/img/rectangle-13-2.svg' %}" alt="Rectangle 13" />
+                      <div class="phone valign-text-middle varela-normal-white-48px">Phone:</div>
+                    </div>
+                  </div>
+                  <div class="message">
+                    <div class="flex-col">
+                      <div class="flex-row">
+                        <div class="message-1 valign-text-middle varela-normal-white-48px">Message:</div>
+                        <img class="rectangle-10" src="{% static 'assets/img/rectangle-10.svg%}' %}" alt="Rectangle 10" />
+                      </div>
+                      <img class="rectangle-11" src="{% static 'assets/img/rectangle-13-3.svg%}' %}" alt="Rectangle 11" />
+                      <img class="rectangle-1" src="{% static 'assets/img/rectangle-13-3.svg%}' %}" alt="Rectangle 12" />
+                      <img class="rectangle-1" src="{% static 'assets/img/rectangle-13-3.svg%}' %}" alt="Rectangle 13" />
+                    </div>
+                  </div>
+                </div>
+                <div class="group-2388 group">
+                  <div class="send-enquiry valign-text-middle">Send Enquiry</div>
+                  <img class="vector" src="{% static 'assets/img/vector.svg%}' %}" alt="Vector" />
+                </div>
+              </div>
+              <div class="group-2380 group">
+                <div class="overlap-group1-1">
+                  <div class="banner-holder"></div>
+                  <p class="banner-title banner-font">
+                    Did you know we<br />also do Software?
+                  </p>
+                  <div class="banner-phone frame">
+                    <div class="overlap-group-1"><img class="phone-image" src="{% static 'assets/img/phone-image-1.png%}' %}" alt="Mask group" /></div>
+                  </div>
+                  <div class="banner-button frame"><div class="visit dmsans-bold-white-20px">Visit</div></div>
+                  <img class="banner-pin" src="{% static 'assets/img/banner-pin@2x.png%}' %}" alt="untitled 7" />
+                </div>
+              </div>
+              <footer class="footer">
+                <div class="flex-col-1">
+                  <img
+                    class="new-mt-logo-transparent-1-1"
+                    src= "{% static 'assets/img/new-mt-logo---transparent-1-2.png' %}"
+                    alt="New MT Logo - transparent 1"
+                  />
+                  <div class="copyright-container">
+                    <img class="vaadincopyright" src="{% static 'assets/img/vaadin-copyright-1.svg' %}" alt="vaadin:copyright" />
+                    <div class="copyright-zenix-ion-2023 dmsans-normal-wild-sand-12px">Copyright ZenixION 2023</div>
+                  </div>
+                </div>
+                <div class="flex-col-2">
+                  <div class="learn-more dmsans-bold-white-20px">Learn More</div>
+                  <div class="flex-col-item dmsans-normal-wild-sand-15px">About</div>
+                  <div class="flex-col-item dmsans-normal-wild-sand-15px">Services</div>
+                  <div class="flex-col-item dmsans-normal-wild-sand-15px">Products</div>
+                </div>
+                <p class="contact-joshua-pan dmsans-bold-white-20px">
+                  Contact:<br /><br />Joshua Panettieri<br />Service Engineer<br />M. +61 (0)430-016527<br />E.
+                  joshua@mach-tech.com.au
+                </p>
+              </footer>
+            </div>
+          </div>
+    </main>
+        
+          <!-- Modal -->
+        <div class="modal fade" id="contactFormModal" tabindex="-1" aria-labelledby="contactModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title plain-h2 text-eucalypt">Contact Sent Successfully</h5>
+                    </div>
+                    <div class="modal-body para text-eucalypt">
+                    Thank you for contacting us.<br> We will be in touch as soon as possible.
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="subscribeFormModal" tabindex="-1" aria-labelledby="subscribeModal" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title plain-h2 text-eucalypt">Subscription Successful</h5>
+                </div>
+                <div class="modal-body para text-eucalypt">
+                Thank you for Subscribing.
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+          </div>
+        </div>
+
+                  
+{% endblock content %}

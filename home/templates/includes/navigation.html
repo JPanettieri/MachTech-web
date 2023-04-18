@@ -6,9 +6,9 @@
   {% else %}
   <nav id="navbar-main" aria-label="Primary navigation" class="navbar navbar-main navbar-expand-lg navbar-theme-primary headroom navbar-dark bg-custom-light navbar-theme-secondary">
   {% endif %}  
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="{% static 'assets/img/brand/longLogo.jpg' %}" alt="logo">
+    <div class="container-fluid col-8">
+      <a class="navbar-brand-big" href="#">
+        <img src= "{% static 'assets/img/transparentLogo.png' %}" alt="New MT Logo - transparent 1"/>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -16,9 +16,9 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Overview</a>
-          <a class="nav-link" href="{% url 'about_us' %}">Who we are</a>
-          <a class="nav-link" href="{% url 'what_we_do' %}">What we do</a>
-          <a class="nav-link" href="{% url 'contact_us' %}">Let's Connect</a>
+          <a class="nav-link" href="{% url 'about_us' %}">Services</a>
+          <a class="nav-link" href="{% url 'what_we_do' %}">Products</a>
+          <a class="nav-link" href="{% url 'contact_us' %}">Contact</a>
         </div>
       </div>
     </div>

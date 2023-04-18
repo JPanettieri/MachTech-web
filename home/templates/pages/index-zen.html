@@ -1,0 +1,318 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<main>
+
+  {% include 'includes/pre-loader.html' %}
+  {% if show_modal_subscribe %}
+  <script>
+    $(document).ready(function(){
+      $("#subscribeFormModal").modal("show");
+      show_modal_subscribe = False
+    });
+  </script>
+  {% endif %}
+  <!-- Hero -->
+  <section class="section-header overflow-hidden pt-7 pt-lg-8 pb-9 pb-lg-12 bg-custom text-eucalypt">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <div class="bootstrap-big-icon d-none d-lg-block">
+            <svg xmlns="{% static 'assets/img/logoShort.jpg' %}" width="700" height="622" class="d-block my-1" viewBox="0 0 118 94"
+              role="img">
+              <title>ZenixION Software Solutions</title>
+            </svg>
+          </div>
+          <h1 class="fw-bolder display-2">
+            ZenixION...
+          </h1>
+          <h2 class="lead fw-normal text-muted mb-4">
+            ...Relax while we do it for you. 
+          </h2>
+          <!-- Button Modal -->
+          <div class="d-flex justify-content-center flex-column mb-6 mb-lg-5">
+            <img class="d-block mx-auto mb-3" src="/static/assets/img/logoShort.jpg" alt="Logo light" height="75px" width="75px">              
+            <span class="text-muted font-small"> 
+                &copy; ZenixION - <span class="plain">by Joshua Panettieri.</span>
+              </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <figure class="position-absolute bottom-0 left-0 w-100 d-none d-md-block mb-n2"><svg class="fill-custom"
+        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 185.4">
+        <path d="M3000,0v185.4H0V0c496.4,115.6,996.4,173.4,1500,173.4S2503.6,115.6,3000,0z"></path>
+      </svg></figure>
+  </section>
+    <div class="container mt-n10 mt-lg-n12 z-2">
+      <div class="row justify-content-center">
+        <div class="col-12 mb-4 col-md-10"><img src="{% static 'assets/img/logoImage.png' %}" alt="Logo with Image"></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section bg-custom-light section-lg">
+    <div class="container">
+      <div class="row justify-content-center mb-5 mb-lg-6">
+        <div class="col-6 col-md-3 text-center mb-4">
+          <div class="icon icon-shape icon-lg bg-white shadow-lg border-light rounded-circle mb-4">
+            <span class="fas fa-code-fork text-eucalypt"></span>
+          </div>
+          <h3 class="fw-bolder para text-eucalypt">Flexible and Adaptable</h3>
+          <p class="text-eucalypt">As the software development industry is constantly evolving, 
+            we never stop training, so that we can adopt and adapt to new technologies 
+            and changing business requirements as they arise. This requires a flexible approach to 
+            software development and allows the ability to pivot quickly if required.</p>
+        </div>
+        <div class="col-6 col-md-3 text-center mb-4">
+          <div class="icon icon-shape icon-lg bg-white shadow-lg border-light rounded-circle mb-4">
+            <span class="fas fa-cogs text-eucalypt"></span>
+          </div>
+          <h3 class="fw-bolder para text-eucalypt">Technical<br>Expertise</h3>
+          <p class="text-eucalypt">We have a deep understanding of the latest technologies, programming 
+            languages, and software development tools. This includes software architecture, development 
+            methodologies, testing, and deployment.</p>
+        </div>
+        <div class="col-6 col-md-3 text-center">
+          <div class="icon icon-shape icon-lg bg-white shadow-lg border-light rounded-circle mb-4">
+            <span class="fas fa-commenting text-eucalypt"></span>
+          </div>
+          <h3 class="fw-bolder para text-eucalypt">Strong Communication</h3>
+          <p class="text-eucalypt">We believe good communication is critical to the success of any 
+            software development project.<br>We aspire to have strong communication skills ensuring 
+            that we understand our client's needs and always communicate clearly and effectively 
+            throughout the development process and beyond.</p>
+        </div>
+        <div class="col-6 col-md-3 text-center">
+          <div class="icon icon-shape icon-lg bg-white shadow-lg border-light rounded-circle mb-4">
+            <span class="fas fa-code text-eucalypt"></span>
+          </div>
+          <h3 class="fw-bolder para text-eucalypt">Clean <br> Code </h3>
+          <p class="text-eucalypt">We have a strong commitment to quality and a focus on delivering 
+            high-quality software solutions. This includes a rigorous testing process, attention to detail, 
+            and a dedication to delivering software that meets or exceeds the client's expectations.</p>
+        </div>
+      </div>
+      <div class="row justify-content-between align-items-center mb-5 mb-lg-7">
+        <div class="col-12 col-lg-5 mb-5 mb-lg-0 order-lg-2">
+          <h2 class="h1 text-eucalypt">Made to fit...</h2>
+          <p class="mb-4 lead fw-bold text-eucalypt">Don't settle for anything less than perfect!</p>
+          <p class="mb-4 text-eucalypt para">At ZenixION we will work with you to ensure what you end up with is a perfect fit, there is no such thing as settling here.</p>
+          <a href="{% url 'contact_us' %}" target="_blank"
+            class="btn btn-outline-primary text-eucalypt"><span class="fas fa-address-card me-2"></span> Get in touch</a>
+        </div>
+        <div class="col-12 col-lg-6 order-lg-1">
+          <img src="{% static 'assets/img/puzzle.png' %}" alt="Front pages overview">
+        </div>
+      </div>
+      <div class="row justify-content-between align-items-center mb-5 mb-lg-7">
+        <div class="col-lg-5 mb-5 mb-lg-0">
+          <h2 class="h1 d-flex align-items-center text-eucalypt">Start... To Finish... </h2>
+          <p class="mb-4 lead fw-bold text-eucalypt">We strive for a podium finish!</p>
+          <p class="mb-4 text-eucalypt para">Ever had a project that got started and never really finished... each contributor blaming the next about why its delayed... Not us.
+            At ZenixION we see the project through, in the rare case a project is too big for us to complete alone, we have a select team that can assist us to get the project 
+            completed on time and to its full potential. 
+          </p>
+          <a href="{% url 'contact_us' %}" target="_blank"
+            class="btn btn-outline-primary text-eucalypt"><span class="fas fa-address-card me-2"></span> Get in touch</a>
+        </div>
+        <div class="col-lg-6">
+          <img src="{% static 'assets/img/sdlc.png' %}" alt="sdlc">
+        </div>
+      </div>
+      <div class="row justify-content-between align-items-center">
+        <div class="col-12 col-lg-5 order-lg-2 mb-5 mb-lg-0">
+          <h2 class="h1 d-flex align-items-center text-eucalypt">Consultation and Support...</h2>
+          <p class="mb-4 lead fw-bold text-eucalypt">Need help knowing what you need help with?</p>
+          <p class="mb-4 text-eucalypt para">We adore unraveling conundrums, especially when the naysayers claim it's impossible. But hey, sometimes the real issue isn't the one 
+            staring you in the face. With more than a decade of problem-seeking and solution-finding under our belt, we're here to assist you in unearthing the real challenge 
+            and concocting a zany scheme to tackle it head-on. 
+          </p>
+            <a href="{% url 'contact_us' %}" target="_blank"
+            class="btn btn-outline-primary text-eucalypt"><span class="fas fa-address-card me-2"></span> Get in touch</a>
+        </div>
+        <div class="col-12 col-lg-6 order-lg-1">
+          <img src="{% static 'assets/img/consultation-removebg.png' %}" alt="Dashboard Preview">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-lg bg-custom">
+    <div class="container">
+      <div class="row justify-content-left">
+        <div class="col-lg-12">
+          <h1 class="display-3 text-left text-pale">Elevate Your Business...</h1>
+            <h1 class="text-right plain-h text-pale"> Unleash the Power of Technology</h1>
+          <p class="lead text-pale">Discover the extensive range of services that ZenixION can offer to assist you today!</p>
+        </div>
+      </div>
+      <div class="row mt-6">
+        <div class="col-md-4">
+          <!-- Icon box -->
+          <div class="icon-box text-center mb-5">
+            <div class="icon">
+              <span class="far fa-lightbulb text-pale"></span>
+            </div>
+            <h3 class="h5 my-3 plain-h2 text-pale">CUSTOM SOFTWARE</h3>
+            <p class="text-pale">Get the software solution tailored to your unique business needs and requirements with our custom software services.</p>
+          </div>
+          <!-- End of Icon box -->
+        </div>
+        <div class="col-md-4">
+          <!-- Icon box -->
+          <div class="icon-box text-center mb-5">
+            <div class="icon">
+              <span class="fab fa-internet-explorer text-pale"></span>
+            </div>
+            <h3 class="h5 my-3 plain-h2 text-pale">WEB APPLICATIONS</h3>
+            <p class="text-pale">Improve your online presence and boost your business with our 
+              reliable and secure web application development services.
+            </p>
+          </div>
+          <!-- End of Icon box -->
+        </div>
+        <div class="col-md-4">
+          <!-- Icon box -->
+          <div class="icon-box text-center mb-5">
+            <div class="icon">
+              <span class="fas fa-mobile-android-alt text-pale"></span>
+            </div>
+            <h3 class="h5 my-3 plain-h2 text-pale">MOBILE APPLICATIONS</h3>
+            <p class="text-pale">Stay connected with your customers on-the-go and 
+              increase your reach with our innovative mobile application development services.</p>
+          </div>
+          <!-- End of Icon box -->
+        </div>
+        <div class="col-md-4">
+          <!-- Icon box -->
+          <div class="icon-box text-center mb-5">
+            <div class="icon">
+              <span class="fas fa-cloud-upload text-pale"></span>
+            </div>
+            <h3 class="h5 my-3 plain-h2 text-pale">CLOUD SERVICES</h3>
+            <p class="text-pale">Let us help reduce your IT infrastructure costs and increase your scalability with 
+              flexible and cost-effective cloud services.</p>
+          </div>
+          <!-- End of Icon box -->
+        </div>
+        <div class="col-md-4">
+          <!-- Icon box -->
+          <div class="icon-box text-center mb-5">
+            <div class="icon">
+              <span class="fas fa-clipboard text-pale"></span>
+            </div>
+            <h3 class="h5 my-3 plain-h2 text-pale">SOFTWARE AUDITING</h3>
+            <p class="text-pale">Ensure the security, compliance, and performance of your software systems with our 
+              thorough and comprehensive software auditing services.</p>
+          </div>
+          <!-- End of Icon box -->
+        </div>
+        <div class="col-md-4">
+          <!-- Icon box -->
+          <div class="icon-box text-center mb-5">
+            <div class="icon">
+              <span class="fas fa-server text-pale"></span>
+            </div>
+            <h3 class="h5 my-3 plain-h2 text-pale">IT TRANSFORMATION</h3>
+            <p class="text-pale">Transform your IT infrastructure and operations to meet the demands of the 
+              digital age and drive business growth with our IT transformation services.</p>
+          </div>
+          <!-- End of Icon box -->
+        </div>
+        <div class="col-md-4">
+          <!-- Icon box -->
+          <div class="icon-box text-center">
+            <div class="icon">
+              <span class="fas fa-headset text-pale"></span>
+            </div>
+            <h3 class="h5 my-3 plain-h2 text-pale">SUPPORT & MAINTENANCE</h3>
+            <p class="text-pale">Minimize downtime and keep your software systems running smoothly with our 
+              reliable and responsive support and maintenance services.
+            </p>
+          </div>
+          <!-- End of Icon box -->
+        </div>
+        <div class="col-md-4">
+          <!-- Icon box -->
+          <div class="icon-box text-center mb-5">
+            <div class="icon">
+              <span class="fas fa-tasks text-pale"></span>
+            </div>
+            <h3 class="h5 my-3 plain-h2 text-pale">PROJECT MANAGEMENT</h3>
+            <p class="text-pale">Deliver successful projects on time and within budget with our experienced 
+              and skilled project management services.
+            </p>
+          </div>
+          <!-- End of Icon box -->
+        </div>
+        <div class="col-md-4">
+          <!-- Icon box -->
+          <div class="icon-box text-center mb-5">
+            <div class="icon">
+              <span class="fas fa-cogs text-pale"></span>
+            </div>
+            <h3 class="h5 my-3 plain-h2 text-pale">INTEGRATION SERVICES</h3>
+            <p class="text-pale">Integrate your software systems seamlessly and unlock new capabilities with our 
+              efficient and effective integration services.</p>
+          </div>
+          <!-- End of Icon box -->
+        </div>
+        <div class="col-md-12 d-flex justify-content-center">
+          <a href="{% url 'contact_us' %}" target="_blank"
+          class="btn btn-outline-secondary text-pale"><span class="fas fa-address-card me-2"></span> Get in touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section-lg bg-custom-light">
+    <div class="container">
+      <div class="row justify-content-center text-center text-dark mb-5">
+        <div class="col-lg-12 col-xl-8">
+          <h2 class="h1 fw-light text-eucalypt mb-3">Less <span class="fw-bold text-eucalypt">pain</span>, more <span class="fw-bold text-eucalypt">gain</span>.
+          </h2>
+          <p class="lead text-eucalypt">
+            We know sometime tech can be painfull, but call us crazy, we love it! Let us take the pain out of your next Software Development project. 
+          </p>
+        </div>
+      </div>
+      <div class="row justify-content-between align-items-center mb-5 mb-lg-7">
+        <div class="col-12 col-lg-5 mb-5 mb-lg-0 order-lg-2">
+          <h2 class="h1 text-eucalypt">Painless...</h2>
+          <p class="mb-4 lead fw-bold text-eucalypt">We will take the pains, you take the gains!</p>
+          <p class="mb-4 text-eucalypt">At ZenixION, we're passionate about making software development pain-free and stress-free for our clients. With our expertise and experience, 
+            we can help you upgrade existing software, start a new project, or expand into mobile/web applications with ease.</p>
+          <p class="mb-4 text-eucalypt">Our team is dedicated to providing exceptional customer service and satisfaction, working closely with you to understand your needs and ensure the final product meets and 
+            exceeds your expectations. We've helped clients in a variety of industries achieve their software development goals, and we're committed to delivering the same high-quality 
+            results for you.</p>
+          <a href="{% url 'contact_us' %}" target="_blank"
+            class="btn btn-outline-primary text-eucalypt"><span class="fas fa-address-card me-2"></span> Get in touch</a>
+        </div>
+        <div class="col-12 col-lg-6 mb-6 order-lg-1">
+          <img src="{% static 'assets/img/gains-chart.png' %}" alt="sdlc">
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+  <!-- Modal -->
+  <div class="modal fade" id="subscribeFormModal" tabindex="-1" aria-labelledby="subscribeModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title plain-h2 text-eucalypt">Subscription Successful</h5>
+          </div>
+          <div class="modal-body para text-eucalypt">
+          Thank you for Subscribing.
+          </div>
+          <div class="modal-footer">
+          <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Close</button>
+          </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
