@@ -6095,12 +6095,14 @@ textarea.form-control-lg {
     opacity: 1; }
 
 .carousel-caption {
-  position: absolute;
-  right: 15%;
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  position: sticky;
+  top: 70px;
+  left: 20px;
+  width: 500px;
   bottom: 1.25rem;
-  left: 15%;
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+  padding: .25rem;
   color: #d0d4cc;
   text-align: center; }
 
@@ -19440,6 +19442,9 @@ blockquote {
   background-color: #0b0f18;
   display: inline-flex;
   border-radius: 20px;
-  max-height: 150px;
+  padding: 5px;
+  border: solid 2px var(--bs-red);
+  max-height: 165px;
+  box-shadow: 0 0 10px 10px #1F1F1F inset;
 }
 /*# sourceMappingURL=pixel.css.map */
