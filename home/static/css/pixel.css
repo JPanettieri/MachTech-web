@@ -240,7 +240,7 @@
   --bs-green: #3aaf85;
   --bs-teal: #20c997;
   --bs-cyan: #17a2b8;
-  --bs-white: #d0d4cc;
+  --bs-white: #e8e3e3;
   --bs-gray: #6B7280;
   --bs-gray-dark: #374151;
   --bs-primary: #78826d;
@@ -255,7 +255,7 @@
   --bs-white: #d0d4cc;
   --bs-gray: #1F2937;
   --bs-dark: #1c2540;
-  --bs-black: #171f38;
+  --bs-black: #0e1111;
   --bs-purple: #6f42c1;
   --bs-orange: #e84422;
   --bs-gray-100: #F9FAFB;
@@ -4149,7 +4149,7 @@ textarea.form-control-lg {
 .nav-link {
   color: var(--white);
   font-family: var(--font-family-dm_sans);
-  font-size: var(--font-size-xl);
+  font-size: 2rem;
   font-style: normal;
   font-weight: 700;
   display: block;
@@ -4182,7 +4182,7 @@ textarea.form-control-lg {
       border-color: transparent; }
   .nav-tabs .nav-link.active,
   .nav-tabs .nav-item.show .nav-link {
-    color: #4B5563;
+    color: var(--bs-red);
     background-color: #E5E7EB;
     border-color: #E5E7EB; }
   .nav-tabs .dropdown-menu {
@@ -4197,7 +4197,7 @@ textarea.form-control-lg {
 
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-  color: #78826d;
+  color: var(--bs-red);
   background-color: #f8f8f8; }
 
 .nav-fill > .nav-link,
@@ -4426,7 +4426,7 @@ textarea.form-control-lg {
 
 .navbar-light .navbar-nav .show > .nav-link,
 .navbar-light .navbar-nav .nav-link.active {
-  color: #171f38; }
+  color: var(--bs-red); }
 
 .navbar-light .navbar-toggler {
   color: rgba(23, 31, 56, 0.9);
@@ -4459,7 +4459,7 @@ textarea.form-control-lg {
 
 .navbar-dark .navbar-nav .show > .nav-link,
 .navbar-dark .navbar-nav .nav-link.active {
-  color: #d0d4cc; }
+  color: var(--bs-red); }
 
 .navbar-dark .navbar-toggler {
   color: rgba(255, 255, 255, 0.9);
@@ -4481,9 +4481,10 @@ textarea.form-control-lg {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #d0d4cc;
+  color: #e8e3e3;
+  background-color: #1F1F1F;
   background-clip: border-box;
-  border: 0.0625rem solid #E5E7EB;
+  border: 0.0625rem solid var(--bs-red);
   border-radius: 1rem;
   margin:5px;
   padding:5px;}
@@ -4616,10 +4617,10 @@ textarea.form-control-lg {
   align-items: center;
   width: 100%;
   padding: 1.5rem 1.5rem;
-  font-size: 1rem;
-  color: #1F2937;
+  font-size: 2.5rem;
+  color: #e8e3e3;
   text-align: left;
-  background-color: transparent;
+  background-color: #1F1F1F;
   border: 0;
   border-radius: 0;
   overflow-anchor: none;
@@ -4628,8 +4629,8 @@ textarea.form-control-lg {
     .accordion-button {
       transition: none; } }
   .accordion-button:not(.collapsed) {
-    color: #202944;
-    background-color: #F3F4F6;
+    color: #1F1F1F;
+    background-color: var(--bs-red);
     box-shadow: inset 0 -0.0625rem 0 #E5E7EB; }
     .accordion-button:not(.collapsed)::after {
       background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23202944'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
@@ -4660,7 +4661,7 @@ textarea.form-control-lg {
 
 .accordion-item {
   background-color: transparent;
-  border: 0.0625rem solid #E5E7EB; }
+  border: 0.0625rem solid #1F1F1F; }
   .accordion-item:first-of-type {
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem; }
@@ -16142,7 +16143,9 @@ label {
     font-size: 1rem;
     font-weight: 900; }
   .accordion-button:hover {
-    background-color: #F3F4F6; }
+    color: #1F1F1F;
+    background-color: var(--bs-red);
+    box-shadow: inset 0 -0.5rem 0 #1F1F1F; }
 
 .accordion-flush .accordion-button {
   background-color: transparent; }

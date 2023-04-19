@@ -40,7 +40,7 @@ def index(request):
 
 # Pages
 
-def abouts_us(request):
+def about_us(request):
   context = {}
   if request.method == 'POST':
     if 'contact_submit' in request.POST:

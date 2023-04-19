@@ -7,8 +7,8 @@ urlpatterns = [
 
         # Pages
     path('', views.index),
-    path('about-us/', views.abouts_us, name='about_us'),
-    path('contact-us/', views.contact_us, name='contact_us'),
+    path('about-us/', views.about_us, name='about_us'),
+    path('contact_us/', views.contact_us, name='contact_us'),
     path('what_we_do/', views.what_we_do, name='what_we_do'),
     path('blank/', views.blank_page, name='blank'),
 
