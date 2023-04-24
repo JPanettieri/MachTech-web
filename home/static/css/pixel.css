@@ -4509,7 +4509,8 @@ textarea.form-control-lg {
 
 .card-body {
   flex: 1 1 auto;
-  padding: 1.25rem 1.5rem; }
+  padding: 1.25rem 1.5rem;
+  text-align: center;  }
 
 .card-title {
   margin-bottom: 0.75rem; }
@@ -4519,7 +4520,8 @@ textarea.form-control-lg {
   margin-bottom: 0; }
 
 .card-text:last-child {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  }
 
 .card-link:hover {
   text-decoration: none; }
@@ -19450,4 +19452,38 @@ blockquote {
   max-height: 165px;
   box-shadow: 0 0 10px 10px #1F1F1F inset;
 }
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: transparent;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: var(--bs-red);
+  padding: 12px 16px;
+  background-color: #1f1f1f;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
 /*# sourceMappingURL=pixel.css.map */
