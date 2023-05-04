@@ -3,33 +3,23 @@
 
 {% block content %}
     <main>
-
-        {% include 'includes/pre-loader.html' %}
-        {% if show_modal_subscribe %}
-        <script>
-          $(document).ready(function(){
-            $("#subscribeFormModal").modal("show");
-            show_modal_subscribe = False
-          });
-        </script>
-        {% elif show_modal %}
-        <script>
-          $(document).ready(function(){
-            $("#contactFormModal").modal("show");
-            show_modal = False
-          });
-        </script>
-        {% endif %}
+      {% if show_modal %}
+      <script>
+        $(document).ready(function(){
+          $("#contactFormModal").modal("show");
+          show_modal = false
+        });
+      </script>
+      {% endif %}
         <!-- Hero -->
-        <section class="section section-header pb-11 bg-primary text-white">
+        <section class="section section-header pb-11 bg-gray-200 text-white">
             <div class="container">
                 <div class="row justify-content-center text-center">
                     <div class="col-lg-12">
                         <div class="contact-wrapper">
-                            <h1 class="display-2 mt-4">Get<br>in</h1>
-                            <h2 class="display-2 mb-3">Touch<br>Today</h2>
-                            <img class="organic-radius img-fluid" src="{% static 'assets/img/contact.png' %}" alt="great idea">
-                            <h5 class="fw-normal lead text-pale">Do you have a new project in mind? Let's connect and discuss your needs.<br> We guarantee a prompt response!</h5>
+                            <h1 class="display-2 mt-4">Get in</h1>
+                            <h2 class="display-2 mb-3">Touch Today</h2>
+                            <h5 class="fw-normal lead text-pale">Do you have a problem or project you may need our help with?<br> Let's connect and discuss your needs.<br> We guarantee a prompt response!</h5>
                         </div>
                     </div>
                 </div>
@@ -40,7 +30,7 @@
             <div class="container mt-n10">
                 <div class="row">
                     <div class="col-12">
-                        <iframe class="map rounded" id="gmap_canvas" src="https://maps.google.com/maps?q=melbourne&t=&z=8&ie=UTF8&iwloc=&output=embed"></iframe>
+                        <iframe class="map rounded" id="gmap_canvas" src="https://maps.google.com/maps?q=Lang+Lang+VIC+3984&t=&z=8&ie=UTF8&iwloc=&output=embed"></iframe>
                     </div>
                 </div>
             </div>
@@ -51,10 +41,10 @@
                 <div class="col-12 col-lg-8 mb-8">      
                   <!-- Contact Card -->
                   <div class="card border-0 p-2 p-md-3 p-lg-5">
-                    <div class="card-header bg-white border-0 text-center">
-                      <h2 class="plain-h text-eucalypt">Have a project in mind?</h2>
-                      <h2 class="plain-h text-eucalypt">Need help with an issue?</h2>
-                      <p class="text-eucalypt">Let’s talk about it and see how we can help.</p>
+                    <div class="card-header bg-gray-200 border-0 text-center">
+                      <h2 class="plain-h text-white">Have a project in mind?</h2>
+                      <h2 class="plain-h text-white">Need help with an issue?</h2>
+                      <p class="text-white">Let’s talk about it and see how we can help.</p>
                     </div>
                     <div class="card-body plain-h2 px-0 pt-0">
                       <form method="post" action="{% url 'contact_us' %}">
@@ -83,7 +73,7 @@
                         </div>
                         <!-- End of Form -->
                         <div class="d-grid">
-                          <button type="submit" name="contact_submit" id="contact_submit" class="btn rounded btn-primary">Let's Connect</button>
+                          <button type="submit" name="contact_submit" id="contact_submit" class="btn btn-outline-secondary me-3 animate-up-2">Let's Connect</button>
                         </div>
                       </form>
                     </div>
@@ -92,6 +82,7 @@
                 </div>
               </div>
             </div>
+            {% include 'includes/advert.html' %}
           </section>
           <!-- End of section -->
     </main>
@@ -99,34 +90,18 @@
           <!-- Modal -->
         <div class="modal fade" id="contactFormModal" tabindex="-1" aria-labelledby="contactModal" aria-hidden="true">
             <div class="modal-dialog">
-                <div class="modal-content">
+                <div class="modal-content bg-gray-200 text-white">
                     <div class="modal-header">
-                        <h5 class="modal-title plain-h2 text-eucalypt">Contact Sent Successfully</h5>
+                        <h5 class="modal-title plain-h2 bg-gray-200 text-white">Contact Sent Successfully</h5>
                     </div>
-                    <div class="modal-body lead text-eucalypt">
+                    <div class="modal-body lead bg-gray-200 text-white">
                     Thank you for contacting us.<br> We will be in touch as soon as possible.
                     </div>
-                    <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Close</button>
+                    <div class="modal-footer bg-gray-200 text-white">
+                    <button type="button" class="btn btn-outline-secondary me-3 animate-up-2" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Modal -->
-        <div class="modal fade" id="subscribeFormModal" tabindex="-1" aria-labelledby="subscribeModal" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title plain-h2 text-eucalypt">Subscription Successful</h5>
-                </div>
-                <div class="modal-body lead text-eucalypt">
-                Thank you for Subscribing.
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-          </div>
         </div>
 
                   

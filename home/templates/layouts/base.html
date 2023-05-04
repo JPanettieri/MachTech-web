@@ -52,11 +52,22 @@
 
 <body>
 
+  {% block header %}
+  
+    {% include 'includes/navigation.html' %}
+  
+  {% endblock header %}
+
   {% block content %}{% endblock content %}
-  {% include 'includes/navigation.html' %}
+
+  {% block footer %}
+  
+    {% include 'includes/footer.html' %}
+  
+  {% endblock footer %}
+
   {% include 'includes/scripts.html' %}
   {% block javascripts %}{% endblock javascripts %}
-  {% include 'includes/footer.html' %}
 
 </body>
 
